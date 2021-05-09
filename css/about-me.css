@@ -1,0 +1,213 @@
+.section__left{
+    box-shadow: -4px 11px 5px 2px rgba(0,0,0,0.31);
+    -webkit-box-shadow: -4px 11px 5px 2px rgba(0,0,0,0.31);
+    -moz-box-shadow: -4px 11px 5px 2px rgba(0,0,0,0.31);
+    cursor: pointer;
+}
+
+.about-me{
+    background-color: var(--rgba-white-8);
+    margin-top: 4rem;
+    width: 100%;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: 15rem auto;
+    padding: 0 30vh;
+}
+
+.section__about-me{
+    background-color: var(--color-secundario);
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem 0rem;
+    margin-left: 1rem;
+    border-radius: 10px;
+}
+
+.about-me-perfil{
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.about-me-perfil img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid var(--color-black);
+}
+
+.about-me-perfil figcaption{
+    font-size: 3rem;
+    font-family: 'Dancing Script', cursive;
+}
+
+.section__about-me .about-me-description{
+    text-align: justify;
+    padding: 0 .8rem;
+    line-height: 1.5rem;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.section__right{
+    padding: 2rem 2rem;
+    margin: 0 2rem;
+    border-end-end-radius: 10px;
+    box-shadow: 4px 11px 5px 2px rgba(0,0,0,0.31);
+    -webkit-box-shadow: 4px 11px 5px 2px rgba(0,0,0,0.31);
+    -moz-box-shadow: 4px 11px 5px 2px rgba(0,0,0,0.31);   
+    border-right: 1px solid rgba(0,0,0,0.31);
+    border-bottom: 1px solid rgba(0,0,0,0.31);
+}
+
+/* Ocultamos el Scroll */
+.about-me-skills{
+    height: 50vw;
+    overflow: auto;
+    overflow: overlay;
+}
+
+/* Ocultamos el scroll */
+.about-me-skills::-webkit-scrollbar {
+    display: none;
+    width: 10px;
+    height: 10px;
+    background-color: lightblue;
+}
+
+/* * Para que se vea el scroll */
+/* .about-me-skills:hover::-webkit-scrollbar {
+    display: initial;  
+  }
+
+.about-me-skills::-webkit-scrollbar-thumb {
+background-color: #09C;
+} */
+
+
+.about-me-skills h2{
+    font-family: 'Roboto', sans-serif !important;
+    letter-spacing: .2rem;
+    margin-bottom: 2rem;
+}
+
+.about-me-skills h5{
+    letter-spacing: .2rem;
+    margin-bottom: .5rem;
+    transition: color .8s ease-in-out;
+}
+
+.about-me-skills .skill{
+    padding: 1rem .5rem;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--rgba-white-10);
+    transition: box-shadow .5s ease-in-out;
+    transition: transform .8s ease-in-out;
+}
+
+.about-me-skills .skill:hover{
+    cursor: pointer;
+    box-shadow: 4px 11px 5px 2px rgba(0,0,0,0.31);
+    -webkit-box-shadow: 4px 11px 5px 2px rgba(0,0,0,0.31);
+    -moz-box-shadow: 4px 11px 5px 2px rgba(0,0,0,0.31);
+    transform: scale(.97);
+    transition: transform .8s ease-in-out;
+}
+
+.about-me-skills .skill:hover h5{
+    color: var(--rgba-black-10);
+}
+
+.about-me-skills .skill::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: .5rem;
+    transition: background-color .5s ease-in-out;
+}
+
+.about-me-skills .skill:hover::after{
+    background-color: var(--color-secundario);
+    animation: AnimationUnderLine .8s ease-in-out;
+}
+
+.about-me-skills .skill-level{
+    height: 1rem;
+    width: 100%;
+    background-color: var(--color-white);
+    border-radius: 25px;
+    position: relative;
+}
+
+.about-me-skills .single-level{
+    position: absolute;
+    width: 3rem;
+    top: 55px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.about-me-skills .skill-level::before{
+    content: '';
+    /* width: 90%; */
+    height: .8rem;
+    background-color: var(--color-secundario);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0.1rem;
+    border-radius: 25px;
+}
+
+@media screen and (max-width:1024px) {
+    .about-me-skills{
+        height: 80vw;
+    }
+
+    .about-me{
+        background-color: var(--rgba-white-8);
+        margin-top: 4rem;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .section__about-me{
+        /* border: 1px solid red; */
+        background-color: var(--color-secundario);
+        color: var(--color-white);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 4rem 0rem;
+        margin:0 1rem;
+        border-radius: 10px;
+    }
+
+    .section__right{
+        padding: 2rem 2rem;
+        margin: 4rem 2rem;
+        border-end-end-radius: 10px;
+        box-shadow: 4px 11px 5px 2px rgba(0,0,0,0.31);
+        -webkit-box-shadow: 4px 11px 5px 2px rgba(0,0,0,0.31);
+        -moz-box-shadow: 4px 11px 5px 2px rgba(0,0,0,0.31);   
+        border-right: 1px solid rgba(0,0,0,0.31);
+        border-bottom: 1px solid rgba(0,0,0,0.31);
+    }
+
+
+    .about-me-skills{
+        height: 70vw;
+    }
+}

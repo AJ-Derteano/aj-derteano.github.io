@@ -1,0 +1,210 @@
+/* * ESTILOS PARA EL HEADER */
+header {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  background-color: var(--rgba-black-5);
+  /* background-color: transparent; */
+  color: var(--color-white);
+  z-index: 100;
+}
+
+header.scrolled {
+  color: var(--color-secundario);
+  background-color: var(--rgba-white-9);
+  box-sizing: border-box;
+  border-radius: 0 0 10px 10px;
+  font-size: 1.2rem;
+}
+header.scrolled a {
+  font-size: 1.1rem;
+  color: var(--color-secundario);
+}
+
+header.scrolled .ul__sub-nav a {
+  color: var(--color-white);
+}
+
+.nav__menu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* border: 1px solid red; */
+  margin: 0 5rem;
+}
+
+.nav__menu .div__menu-logo {
+  font-family: "Dancing Script", cursive;
+  letter-spacing: 0.3rem;
+}
+.nav__menu .div__menu-logo > a > figure {
+  display: flex;
+  align-items: center;
+}
+
+.div__nav-items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* gap: 2rem; */
+}
+
+.nav-item {
+  width: 100%;
+  line-height: 3.6rem;
+  padding: 0 2rem;
+  /* border: 1px solid red; */
+  text-align: center;
+  position: relative;
+  font-family: "Roboto", sans-serif !important;
+  letter-spacing: 0.3rem;
+  font-weight: 900;
+}
+
+.nav-item a {
+  color: var(--color-white);
+}
+
+.nav-item:hover,
+.div__menu-logo {
+  cursor: pointer;
+  /* transform: scale(1.1); */
+}
+.nav-item:hover::before {
+  background-color: var(--color-tercero);
+  animation: AnimationUnderLine 0.8s ease-in-out;
+}
+.nav-item::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 2px;
+}
+
+header.scrolled .nav-item:hover::before {
+  background-color: var(--color-principal);
+}
+
+.ul__sub-nav {
+  width: max-content;
+  line-height: 1.5rem;
+  position: absolute;
+  background-color: var(--rgba-black-8);
+  top: -9rem;
+  left: 0rem;
+  transition: top 0.7s ease-in-out;
+  border-radius: 5px;
+}
+
+.nav-item:hover .ul__sub-nav {
+  top: 3.65rem;
+  transition: top 0.7s ease-in-out;
+  padding: 1rem 1rem;
+  animation: AnimationOpacity 0.8s ease-in-out;
+}
+
+header.scrolled .ul__sub-nav {
+  background-color: var(--color-white);
+}
+header.scrolled .ul__sub-nav > li > a {
+  font-size: 1rem;
+  color: var(--color-principal);
+}
+
+.ul__sub-nav:hover {
+  top: 3.65rem;
+  transition: top 0.7s ease-in-out;
+  padding: 1rem 1rem;
+  /* background-color: var(--rgba-white-10); */
+}
+
+.ul__sub-nav > li {
+  line-height: 2rem;
+  text-align: start;
+}
+
+.ul__sub-nav:hover > li > a {
+  /* color: var(--color-secundario); */
+}
+
+.ul__sub-nav > li {
+  width: 100%;
+  position: relative;
+  /* border: 1px solid red; */
+}
+
+.ul__sub-nav > li::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 2px;
+}
+
+.ul__sub-nav > li:hover::before {
+  background-color: var(--color-principal);
+  animation: AnimationUnderLine 0.8s ease-in-out;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav__menu .div__menu-logo {
+    font-family: "Dancing Script", cursive;
+    letter-spacing: 0.2rem;
+  }
+
+  .nav-item {
+    width: 100%;
+    line-height: 3.6rem;
+    padding: 0 1.5rem;
+    /* border: 1px solid red; */
+    text-align: center;
+    position: relative;
+    font-family: "Roboto", sans-serif !important;
+    letter-spacing: 0.2rem;
+    font-weight: 900;
+  }
+}
+
+@keyframes AnimationOpacity {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  75% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes AnimationUnderLine {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes AnimationUnderLineClose {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+/* * /ESTILOS PARA EL HEADER */

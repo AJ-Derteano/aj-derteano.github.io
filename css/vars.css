@@ -1,0 +1,32 @@
+:root{
+    --color-principal:#428bca;
+    --color-secundario:#5bc0de;
+    --color-secundario-plus:#f0b2f3;
+    --color-tercero:#736CCE;
+    --color-cuarto:#639AA6;
+    --color-white:#fff;
+    --color-black:#000;
+    --color-silver:#C0C0C0;
+    --rgba-white-10:rgba(255,255,255,1);
+    --rgba-white-9:rgba(255,255,255,.9);
+    --rgba-white-8:rgba(255,255,255,.8);
+    --rgba-white-7:rgba(255,255,255,.7);
+    --rgba-white-6:rgba(255,255,255,.6);
+    --rgba-white-5:rgba(255,255,255,.5);
+    --rgba-white-4:rgba(255,255,255,.4);
+    --rgba-white-3:rgba(255,255,255,.3);
+    --rgba-white-2:rgba(255,255,255,.2);
+    --rgba-white-1:rgba(255,255,255,.1);
+    --rgba-white-10:rgba(255,255,255,0);
+    --rgba-black-10:rgba(0,0,0,1);
+    --rgba-black-9:rgba(0,0,0,.9);
+    --rgba-black-8:rgba(0,0,0,.8);
+    --rgba-black-7:rgba(0,0,0,.7);
+    --rgba-black-6:rgba(0,0,0,.6);
+    --rgba-black-5:rgba(0,0,0,.5);
+    --rgba-black-4:rgba(0,0,0,.4);
+    --rgba-black-3:rgba(0,0,0,.3);
+    --rgba-black-2:rgba(0,0,0,.2);
+    --rgba-black-1:rgba(0,0,0,.1);
+    --rgba-black-0:rgba(0,0,0,0);
+}

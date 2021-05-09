@@ -1,0 +1,168 @@
+/* Librerias propias */
+@import url(../lib/alert/scss/alert-css.css);
+
+/* Normalizando estilos */
+@import url(normalize.css);
+
+/* Variables de color */
+@import url(vars.css);
+
+/* Estilos para el header */
+@import url(header.css);
+
+/* Estilos para inicio */
+@import url(home.css);
+
+/* Estilos para sobre me */
+@import url(about-me.css);
+
+/* Estilos para servicios */
+@import url(services.css);
+
+/* Estilos para el footer */
+@import url(footer.css);
+
+.mt-10{
+    margin-top: 10px;
+}
+
+.mb-10{
+    margin-bottom: 10px;
+}
+.mb-20{
+    margin-bottom: 20px;
+}
+.mb-30{
+    margin-bottom: 30px;
+}
+
+.w-b-10::before{
+    width: 10%;
+}
+.w-b-20::before{
+    width: 20%;
+}
+.w-b-30::before{
+    width: 30%;
+}
+.w-b-40::before{
+    width: 40%;
+}
+.w-b-50::before{
+    width: 50%;
+}
+.w-b-60::before{
+    width: 60%;
+}
+.w-b-70::before{
+    width: 70%;
+}
+.w-b-80::before{
+    width: 80%;
+}
+.w-b-90::before{
+    width: 90%;
+}
+.w-b-100::before{
+    width: 100%;
+}
+
+
+
+/* LODER */
+.content-loader {
+    position: fixed;
+    z-index: -100;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    /*   position: absolute;
+    left: -100vw;
+    text-align: center; */
+  }
+  .content-loader.visible {
+    z-index: 3000;
+    opacity: 1;
+  }
+  
+  .content-loader.visible::before {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 300vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .loader__msg {
+    position: absolute;
+    top: -9rem;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 240px;
+    height: 80px;
+    z-index: 3001;
+  }
+  .loader__msg > h5,
+  .loader__msg > small,
+  .loader__msg > i {
+    color: #fff;
+  }
+  
+  .loader__one {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 15px double;
+    border-color: var(--color-secundario) rgba(0, 0, 0, 0.05);
+    animation: loader 1.5s infinite;
+    z-index: 3001;
+  }
+  
+  .loader__one__content {
+    width: 30px;
+    height: 30px;
+    border: 5px solid;
+    border-radius: 50%;
+    border-color: rgba(0, 0, 0, 0.06) var(--color-principal);
+    animation: 1.5s loaderT infinite;
+  }
+
+  @keyframes loader {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes loaderT {
+    from {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+  
