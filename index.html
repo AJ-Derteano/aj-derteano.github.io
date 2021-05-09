@@ -13,22 +13,27 @@
     <title>AJ-Dev</title>
   </head>
   <body>
-    <header id="main-header" class="header">
+    <header id="main-header" class="main-header">
+      <input type="checkbox" class="menu-btn" id="menu-btn" />
+      <label for="menu-btn" class="menu-icon">
+        <span class="menu-icon__line"></span>
+      </label>
+
+      <div class="div__menu-logo">
+        <!-- <a href="#">
+                  <figure>
+                      <img src="image/favicon.png" alt="Logo">
+                      <figcaption>AJ</figcaption>
+                  </figure>
+              </a> -->
+        <h2>AJ Dev</h2>
+      </div>
       <nav class="nav__menu">
-        <div class="div__menu-logo">
-          <!-- <a href="#">
-                    <figure>
-                        <img src="image/favicon.png" alt="Logo">
-                        <figcaption>AJ</figcaption>
-                    </figure>
-                </a> -->
-          <h2>AJ Dev</h2>
-        </div>
         <ul class="div__nav-items">
           <li class="nav-item"><a href="#inicio">Inicio</a></li>
           <li class="nav-item"><a href="#sobre-mi">Sobre</a></li>
-          <li class="nav-item">
-            <a href="#">Servicios</a>
+          <li class="nav-item sub-menu">
+            <a href="#seccion-servicios">Servicios <span class="arrow-toggle"></span></a>
             <ul class="ul__sub-nav">
               <li class="nav-link">
                 <a href="#desarrollo-web-nativo">Desarrollo Web Nativo</a>
@@ -182,7 +187,7 @@
         </div>
       </section>
     </section>
-    <section id="servicios" class="services">
+    <section id="seccion-servicios" class="services">
       <article id="desarrollo-web-nativo" class="article__servicio">
         <figure>
           <img

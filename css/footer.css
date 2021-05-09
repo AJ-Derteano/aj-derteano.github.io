@@ -113,10 +113,11 @@ footer.footer .div__derechos-autor {
   padding: .5rem 1rem;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 767px) {
   footer.footer .div__seccion-footer {
     width: 100%;
     flex-direction: column;
+    align-items: center;
   }
 
   footer.footer .div__seccion-footer .div__logo-seccion,

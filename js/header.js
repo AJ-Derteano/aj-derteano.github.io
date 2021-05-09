@@ -1,5 +1,5 @@
+//efecto Scroll
 const header = document.getElementById("main-header");
-
 window.addEventListener("scroll", () => {
   if (header) {
     const scrollPos = window.scrollY;
@@ -12,3 +12,16 @@ window.addEventListener("scroll", () => {
     }
   }
 });
+
+//Abrir sub menu
+const btnArrowToggle = document.querySelector(".arrow-toggle");
+btnArrowToggle.onclick = () => {
+  btnArrowToggle.classList.toggle("rotate");
+  document.querySelector(".ul__sub-nav").classList.toggle("open");
+};
+
+//Abrir menu
+const btnMenu = document.querySelector(".menu-icon");
+btnMenu.onclick = () => {
+  document.getElementById("main-header").classList.toggle("open");
+};
