@@ -166,6 +166,9 @@
     padding-left: 1rem;
     transition: max-height 0.8s ease-in-out;
   }
+  .ul__sub-nav a{
+    font-weight: bold;
+  }
 
   /* Sub menu abierto */
   .ul__sub-nav.open {
@@ -178,7 +181,11 @@
   .main-header.scrolled {
     background-color: var(--rgba-white-9);
   }
-
+  
+  .main-header a,
+  .main-header h2 {
+    color: var(--color-white);
+  }
   .main-header.scrolled a,
   .main-header.scrolled h2 {
     color: var(--color-secundario);
