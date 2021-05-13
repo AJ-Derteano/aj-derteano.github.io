@@ -1,6 +1,7 @@
 import { customAlert } from "../lib/alert/alert-lib.js";
 
-let formatEmail = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+let formatEmail =
+  /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 let inp = document.getElementsByClassName("inp-form");
 
 for (let i = 0; i < inp.length; i++) {
@@ -10,6 +11,12 @@ for (let i = 0; i < inp.length; i++) {
       : this.nextElementSibling.classList.remove("label-activo");
   });
 }
+
+let btnContactOpen = document.querySelector("#btn-contacto");
+let contactForm = document.querySelector(".div__footer-contacto");
+btnContactOpen.onclick = () => {
+  contactForm.classList.toggle("open");
+};
 
 let btnEnviar = document.querySelector("#btn-Enviar");
 

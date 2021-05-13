@@ -13,8 +13,17 @@ footer.footer .div__seccion-footer {
   width: 100%;
   background-color: var(--color-secundario);
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  /* align-items: center; */
   padding: 2rem 4rem;
+}
+
+.div__agradecimientos{
+  width: 30vw;
+}
+
+.title_agradecimientos{
+  margin-bottom: 1rem;
 }
 
 footer.footer .div__derechos-autor {
@@ -36,9 +45,22 @@ footer.footer .div__derechos-autor {
   width: 40vh;
   padding: 1rem;
   border-radius: 10px;
+  position: fixed;
+  padding: 1rem;
+  bottom: -80%;
+  left: 1rem;
+  z-index: 1000;
+  transition: bottom .8s ease-in-out;
+  background-color: var(--color-secundario);
   box-shadow: 4px 11px 5px 2px rgba(0, 0, 0, 0.31);
   -webkit-box-shadow: 4px 11px 5px 2px rgba(0, 0, 0, 0.31);
   -moz-box-shadow: 4px 11px 5px 2px rgba(0, 0, 0, 0.31);
+}
+.div__footer-contacto.open html{
+  position: relative;
+}
+.div__footer-contacto.open{
+  bottom: 1rem;
 }
 .div__footer-contacto h2 {
   text-align: end;

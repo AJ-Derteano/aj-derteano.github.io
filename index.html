@@ -44,7 +44,7 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item"><a href="#">Contacto</a></li>
+          <li class="nav-item"><a id="btn-contacto">Contacto</a></li>
         </ul>
       </nav>
     </header>
@@ -248,52 +248,14 @@
             <li><a href="#desarrollo-web">Desarrollo Web</a></li>
           </ul>
         </div>
-        <div class="div__footer-contacto">
-          <h2>Contactame</h2>
-          <form action="#" autocomplete="off" id="form-contact">
-            <div class="form-row">
-              <input
-                type="text"
-                class="form-control inp-form"
-                name="name"
-                id="name"
-              />
-              <label for="name" class="form-control label-form">Nombres</label>
-            </div>
-            <div class="form-row">
-              <input
-                type="text"
-                class="form-control inp-form"
-                name="name"
-                id="consulta"
-              />
-              <label for="name" class="form-control label-form">Consulta</label>
-            </div>
-            <div class="form-row">
-              <input
-                type="email"
-                class="form-control inp-form"
-                name="name"
-                id="email"
-              />
-              <label for="name" class="form-control label-form">Correo</label>
-            </div>
-            <div class="form-row">
-              <textarea
-                class="txt-detalle"
-                name="detalle"
-                id="txt-detalle"
-                cols="30"
-                rows="10"
-                placeholder="Cuentame sobre tus dudas o consultas"
-              ></textarea>
-            </div>
-            <div class="form-row">
-              <span id="btn-Enviar" class="span__btn-enviar"
-                ><p>Enviar</p></span
-              >
-            </div>
-          </form>
+        <div class="div__agradecimientos">
+          <h4 class="title_agradecimientos">Agradecimientos y creditos</h4>
+          <h4>Imagenes gracias a:</h4>
+          <ul>
+            <li><a href="http://www.freepik.com"> Diseñado por stories / Freepik </a></li>
+            <li><a href="http://www.freepik.com">Designed by katemangostar / Freepik</a></li>
+            <li><a href="http://www.freepik.com">Designed by upklyak / Freepik</a></li>
+          </ul>
         </div>
       </div>
       <div class="div__derechos-autor">
@@ -301,6 +263,55 @@
       </div>
     </footer>
   </body>
+
+  <!-- Form contacto -->
+  <div class="div__footer-contacto">
+    <h2>Contactame</h2>
+    <form action="#" autocomplete="off" id="form-contact">
+      <div class="form-row">
+        <input
+          type="text"
+          class="form-control inp-form"
+          name="name"
+          id="name"
+        />
+        <label for="name" class="form-control label-form">Nombres</label>
+      </div>
+      <div class="form-row">
+        <input
+          type="text"
+          class="form-control inp-form"
+          name="name"
+          id="consulta"
+        />
+        <label for="name" class="form-control label-form">Consulta</label>
+      </div>
+      <div class="form-row">
+        <input
+          type="email"
+          class="form-control inp-form"
+          name="name"
+          id="email"
+        />
+        <label for="name" class="form-control label-form">Correo</label>
+      </div>
+      <div class="form-row">
+        <textarea
+          class="txt-detalle"
+          name="detalle"
+          id="txt-detalle"
+          cols="30"
+          rows="10"
+          placeholder="Cuentame sobre tus dudas o consultas"
+        ></textarea>
+      </div>
+      <div class="form-row">
+        <span id="btn-Enviar" class="span__btn-enviar"
+          ><p>Enviar</p></span
+        >
+      </div>
+    </form>
+  </div>
 
   <!-- LOADER -->
   <div id="spinner-loader" class="content-loader">
