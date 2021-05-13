@@ -13,8 +13,12 @@ for (let i = 0; i < inp.length; i++) {
 }
 
 let btnContactOpen = document.querySelector("#btn-contacto");
+let btnCloseContact = document.querySelector(".span__btn-close-form");
 let contactForm = document.querySelector(".div__footer-contacto");
 btnContactOpen.onclick = () => {
+  contactForm.classList.toggle("open");
+};
+btnCloseContact.onclick = () => {
   contactForm.classList.toggle("open");
 };
 
