@@ -33,7 +33,7 @@ btnEnviar.onclick = () => {
   const data = validateData({
     name,
     email: correo,
-    service: consulta,
+    subject: consulta,
     details: detalles,
   });
 
@@ -56,6 +56,8 @@ btnEnviar.onclick = () => {
   }
 
   if (data) {
+    data.contacto=true;
+    console.log(data)
     sendEmail(data);
   } else {
     sendEmailMode();
@@ -64,12 +66,12 @@ btnEnviar.onclick = () => {
 };
 
 //Funcion para validar los datos
-function validateData({ name = "", email = "", service = "", details = "" }) {
-  if (name && email && service && details) {
+function validateData({ name = "", email = "", subject = "", details = "" }) {
+  if (name && email && subject && details) {
     let data = {
       name: name,
       email: email,
-      service: service,
+      subject: subject,
       details: details,
     };
     return data;
@@ -78,45 +80,16 @@ function validateData({ name = "", email = "", service = "", details = "" }) {
   }
 }
 
-function sendEmail(data) {
-  /* $.ajax({
-    type: "POST",
-    url: "php/email",
-    data: data,
-    success: function (r) {
-      if (r) {
-        sendEmailMode();
-        customAlert({
-          title: "Correo enviado!!!",
-          descrip: "Se ha enviado el correo, pronto te contactare.",
-        });
-
-        //Reiniciamos el formulario
-        $("#form-contact")[0].reset();
-      } else {
-        sendEmailMode();
-      }
-    },
-  }); */
-  /* const http = new XMLHttpRequest();
-  const url = "http://127.0.0.1:5500/index.html";
-  http.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) {
-      console.log(this.responseText);
-    } else {
-      console.log('que paso 2');
-    }
-
-    http.open("GET", url);
-    http.send();
-  }; */
-
-  customAlert({ title: "Pagina en desarrollo" });
-  sendEmailMode();
+let sendEmail =  (data) => {
+  return fetch('controller/email', {method:'POST', body:JSON.stringify(data)})
+      .then((res) =>
+        res.ok
+          ? res.json()
+          : Promise.reject({
+              err: true,
+              status: res.status || "00",
+              statusText: res.statusText || "Ocurrio un error",
+            })
+      )
+      .catch((err) => err);
 }
-
-//Desactivamos el loader
-let sendEmailMode = () => {
-  let spinerLoader = document.getElementById("spinner-loader");
-  spinerLoader.classList.toggle("visible");
-};
