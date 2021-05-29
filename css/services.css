@@ -8,6 +8,12 @@
   justify-content: space-between;
 }
 
+.titleServicios{
+  font-size: 2rem;
+  margin-top: 7rem;
+  text-align: center;
+}
+
 .services .article__servicio {
   position: relative;
   width: 480px;
