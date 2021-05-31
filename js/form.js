@@ -19,12 +19,18 @@ btnContactOpen.onclick = () => {
   contactForm.classList.toggle("open");
 };
 btnCloseContact.onclick = () => {
-  contactForm.classList.toggle("open");
+  contactForm.classList.remove("open");
 };
 
 let btnEnviar = document.querySelector("#btn-Enviar");
 
 btnEnviar.onclick = () => {
+  customAlert({
+    title: "EN DESARROLLO",
+    descrip: "Esta función esta en desarrollo"
+  });
+  return;
+
   let name = document.getElementById("name").value;
   let consulta = document.getElementById("consulta").value;
   let correo = document.getElementById("email").value;
@@ -34,33 +40,33 @@ btnEnviar.onclick = () => {
     name,
     email: correo,
     subject: consulta,
-    details: detalles,
+    details: detalles
   });
 
-  sendEmailMode();
+  //sendEmailMode();
 
   if (!formatEmail.test(correo)) {
     customAlert({
       title: "Formato de correo invalido",
-      descrip: "Use un correo con el siguiente formato correo@correo.com",
+      descrip: "Use un correo con el siguiente formato correo@correo.com"
     });
-    sendEmailMode();
+    //sendEmailMode();
     return;
   }
   if (correo === "correo@correo.com") {
     customAlert({
-      title: "No use el correo de ejemplo",
+      title: "No use el correo de ejemplo"
     });
-    sendEmailMode();
+    //sendEmailMode();
     return;
   }
 
   if (data) {
-    data.contacto=true;
-    console.log(data)
+    data.contacto = true;
+    console.log(data);
     sendEmail(data);
   } else {
-    sendEmailMode();
+    //sendEmailMode();
     customAlert({ title: "Rellene todos los campos." });
   }
 };
@@ -72,7 +78,7 @@ function validateData({ name = "", email = "", subject = "", details = "" }) {
       name: name,
       email: email,
       subject: subject,
-      details: details,
+      details: details
     };
     return data;
   } else {
@@ -80,16 +86,19 @@ function validateData({ name = "", email = "", subject = "", details = "" }) {
   }
 }
 
-let sendEmail =  (data) => {
-  return fetch('controller/email', {method:'POST', body:JSON.stringify(data)})
-      .then((res) =>
-        res.ok
-          ? res.json()
-          : Promise.reject({
-              err: true,
-              status: res.status || "00",
-              statusText: res.statusText || "Ocurrio un error",
-            })
-      )
-      .catch((err) => err);
-}
+let sendEmail = data => {
+  return fetch("controller/email", {
+    method: "POST",
+    body: JSON.stringify(data)
+  })
+    .then(res =>
+      res.ok
+        ? res.json()
+        : Promise.reject({
+            err: true,
+            status: res.status || "00",
+            statusText: res.statusText || "Ocurrio un error"
+          })
+    )
+    .catch(err => err);
+};

@@ -2,27 +2,36 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <!-- Facebook metatags -->
-    <meta property="og:site_name" content="AJ-Dev"/>
-    <meta property="og:title" content="AJ-Dev desarrollador de Software"/>
-    <meta property="og:image" content="image/logo/aj-dev-logo720x360.jpg"/>
-    <meta property="og:url" content="https://aj-derteano.github.io/portfolio"/>
-    <meta property="og:description" content="Desarrollador de software"./>
+    <meta property="og:site_name" content="AJ-Dev" />
+    <meta property="og:title" content="AJ-Dev desarrollador de Software" />
+    <meta property="og:image" content="image/logo/aj-dev-logo720x360.jpg" />
+    <meta property="og:url" content="https://aj-derteano.github.io/portfolio" />
+    <meta property="og:description" content="Desarrollador de software" . />
 
     <!-- Twitter metatags -->
 
-    <meta name="twitter:card" content="AJ-Dev">
-    <meta name="twitter:site" content="@https://aj-derteano.github.io/portfolio">
-    <meta name="twitter:creator" content="@AJ Derteano">
-    <meta name="twitter:title" content="AJ-Dev desarrollador de Software">
-    <meta name="twitter:description" content="Desarrollador de software">
-    <meta name="twitter:image:src" content="image/logo/aj-dev-logo720x360.jpg">
+    <meta name="twitter:card" content="AJ-Dev" />
+    <meta
+      name="twitter:site"
+      content="@https://aj-derteano.github.io/portfolio"
+    />
+    <meta name="twitter:creator" content="@AJ Derteano" />
+    <meta name="twitter:title" content="AJ-Dev desarrollador de Software" />
+    <meta name="twitter:description" content="Desarrollador de software" />
+    <meta
+      name="twitter:image:src"
+      content="image/logo/aj-dev-logo720x360.jpg"
+    />
 
-    <meta name="keywords" content="AJ-Dev, desarrollador de software, Frontend, Backend, software developer, react developer, php developer, diseño responsivo">
+    <meta
+      name="keywords"
+      content="AJ-Dev, desarrollador de software, Frontend, Backend, software developer, react developer, php developer, diseño responsivo"
+    />
 
     <link
       rel="shortcut icon"
@@ -30,6 +39,8 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="./lib/alert/scss/alert-css.css" />
+    <link rel="stylesheet" href="./css/slider.css" />
 
     <title>AJ Dev</title>
   </head>
@@ -208,7 +219,7 @@
         </div>
       </section>
     </section>
-    <h3 class="titleServicios">Servicios</h3>
+    <h3 class="titleseccion">Servicios</h3>
     <section id="seccion-servicios" class="services">
       <article id="desarrollo-web-nativo" class="article__servicio">
         <figure>
@@ -221,7 +232,9 @@
         <div class="div__servicio-descrip">
           <h3>Desarrollo Web</h3>
           <p>
-            Optimiza y controla los diferentes procesos en tu empresa o emprendimiento, logrando la automatización y excelencia en cada uno de ellos.
+            Optimiza y controla los diferentes procesos en tu empresa o
+            emprendimiento, logrando la automatización y excelencia en cada uno
+            de ellos.
           </p>
         </div>
       </article>
@@ -232,7 +245,9 @@
         <div class="div__servicio-descrip">
           <h3>Diseño Web</h3>
           <p>
-            Presenta tu marca o empresa al mundo, con un diseño atractivo y adaptable en diferentes dispositivos, da a conocer tu potencial y consigue el crecimiento de tu empresa o marca. 
+            Presenta tu marca o empresa al mundo, con un diseño atractivo y
+            adaptable en diferentes dispositivos, da a conocer tu potencial y
+            consigue el crecimiento de tu empresa o marca.
           </p>
         </div>
       </article>
@@ -246,10 +261,46 @@
         <div class="div__servicio-descrip">
           <h3>Análisis de datos y Modelado de Datos</h3>
           <p>
-            Estructura tu información optimizando el manejo de los datos, ayudándote a toma de decisiones para maximizar tus ganancias y reducir enormemente tus perdidas.
+            Estructura tu información optimizando el manejo de los datos,
+            ayudándote a toma de decisiones para maximizar tus ganancias y
+            reducir enormemente tus perdidas.
           </p>
         </div>
       </article>
+    </section>
+
+    <h3 class="titleseccion">Proyectos</h3>
+    <section class="seccion-proyectos">
+      <div class="slider">
+        <div class="slides">
+          <input type="radio" name="radio-btn" id="radio1" />
+          <input type="radio" name="radio-btn" id="radio2" />
+          <input type="radio" name="radio-btn" id="radio3" />
+
+          <div class="slide first">
+              <h2>Luantec</h2>
+              <img src="./image/proyects/luantec.jpg" alt="Luantec" />
+              <p>Sistema realizado con las tecnologías PHP, JS, jQuery, CSS, HTML5, Bootstrap, MySql ,para el control interno de compras/ventas, clientes y proveedores.</p>
+          </div>
+          <div class="slide">
+              <h2>Finan App</h2>
+              <img src="./image/proyects/finan-app.jpg" alt="Finan-App" />
+              <p>Aplicación realizada con React, Firebase, PHP, MySql para el control de finzansas personales</p>
+          </div>
+          <div class="slide">
+              <h2>Portafolio</h2>
+              <img src="./image/proyects/portafolio.jpg" alt="portafolio" />
+              <p>Portafolio realizado con HTM5, CSS, JavaScript</p>
+          </div>
+
+        </div>
+
+        <div class="navigation-manual">
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
+        </div>
+      </div>
     </section>
 
     <footer class="footer">
@@ -354,5 +405,6 @@
 
   <script src="js/header.js"></script>
   <script src="js/bg-hero.js"></script>
+  <script src="js/slider.js"></script>
   <script type="module" src="js/form.js"></script>
 </html>

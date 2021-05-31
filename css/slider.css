@@ -1,0 +1,113 @@
+.seccion-proyectos {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.slider {
+  width: 60%;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.slides {
+  width: 300%;
+  height: 100%;
+  display: flex;
+}
+
+.slide {
+  width: 33.33%;
+  position: relative;
+  transition: 2s;
+}
+
+.slide h2 {
+  position: absolute;
+  /* margin-top: 1rem;
+    margin-left: 1rem; */
+  padding: 1rem;
+  font-size: 2.5rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-bottom-right-radius: 10px;
+  color: #fff;
+}
+
+.slide p {
+  position: absolute;
+  width: 40%;
+  bottom: 4px;
+  right: 0;
+  padding: 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  border-top-left-radius: 10px;
+  text-align: justify;
+}
+
+.slide img {
+  width: 100%;
+}
+
+.slides input {
+  display: none;
+}
+
+.navigation-manual {
+  position: absolute;
+  width: 100%;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.navigation-manual .manual-btn {
+  padding: 8px;
+  border-radius: 16px;
+  border: 2px solid var(--color-principal);
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+  margin-right: 40px;
+}
+
+.manual-btn:hover {
+  background-color: var(--color-principal);
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -33.33%;
+}
+#radio3:checked ~ .first {
+  margin-left: -66.66%;
+}
+
+.active {
+  background-color: var(--color-principal);
+}
+
+@media screen and (max-width: 736px) {
+  .slider {
+    width: 80%;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .slide h2 {
+    font-size: 1.2rem;
+    padding: 0.3rem;
+  }
+
+  .slide p {
+    width: 100%;
+    padding: 0.2rem 0.5rem;
+  }
+}
