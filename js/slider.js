@@ -13,4 +13,4 @@ setInterval(() => {
 
   slideCount++;
   if (slideCount > 3) slideCount = 1;
-}, 2000);
+}, 10000);
