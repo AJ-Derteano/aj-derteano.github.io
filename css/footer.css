@@ -18,9 +18,9 @@ footer.footer .div__seccion-footer {
   padding: 2rem 4rem;
 }
 
-.div__agradecimientos {
+/* .div__agradecimientos {
   width: 30vw;
-}
+} */
 
 .title_agradecimientos {
   margin-bottom: 1rem;
@@ -172,7 +172,7 @@ footer.footer .div__derechos-autor {
 @media screen and (max-width: 767px) {
   footer.footer .div__seccion-footer {
     width: 100%;
-    flex-direction: column;
+    flex-direction: column`;
     align-items: center;
   }
 
