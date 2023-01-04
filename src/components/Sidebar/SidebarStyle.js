@@ -12,10 +12,11 @@ const SidebarStyle = styled.div`
 
   .close-button {
     position: absolute;
-    width: 50px;
-    height: 50px;
-    font-size: 50px;
-    color: #fff;
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    /* background-color: rgba(255, 255, 255, 0.9); */
+    color: #5bc0de;
     display: none;
   }
 
@@ -41,8 +42,7 @@ const SidebarStyle = styled.div`
     .close-button {
       display: block;
       padding: 5px;
-      color: #5bc0de;
-      right: -60px;
+      right: -50px;
     }
   }
 
@@ -114,6 +114,11 @@ const SidebarStyle = styled.div`
       border-bottom: 2px solid #fff;
 
       li{
+        &.active {
+          background-color: #fff;
+          color: #fff;
+        }
+
         &:hover {
           background-color: #fff;
           -webkit-transition: background-color 0.3s linear;

@@ -13,6 +13,7 @@ import { LangContext } from '../../context/LangContext';
 const Sidebar = () => {
   const language = useContext(LangContext);
   const [openMenu, setOpenMenu] = useState(false);
+  const [buttonActive, setButtonActive] = useState('');
 
   return (
     <SidebarStyle id='menu' className={openMenu ? 'open' : ''}>
@@ -45,29 +46,49 @@ const Sidebar = () => {
         <div className='main-nav'>
           <nav className='main-nav' role='navigation'>
             <ul className='main-menu'>
-              <li>
-                <a href='#about-me'>
+              <li className={buttonActive === 'about-me' ? 'active' : ''}>
+                <a
+                  href='#about-me'
+                  onClick={() => {
+                    setButtonActive('about-me');
+                  }}
+                >
                   <FormattedMessage
                     id='sidebar.about-me'
                     defaultMessage='About me'
                   />
                 </a>
               </li>
-              <li>
-                <a href='#skill'>
+              <li className={buttonActive === 'skill' ? 'active' : ''}>
+                <a
+                  href='#skill'
+                  onClick={() => {
+                    setButtonActive('skill');
+                  }}
+                >
                   <FormattedMessage id='sidebar.skill' defaultMessage='Skill' />
                 </a>
               </li>
-              <li>
-                <a href='#projects'>
+              <li className={buttonActive === 'projects' ? 'active' : ''}>
+                <a
+                  href='#projects'
+                  onClick={() => {
+                    setButtonActive('projects');
+                  }}
+                >
                   <FormattedMessage
                     id='sidebar.projects'
                     defaultMessage='My projects'
                   />
                 </a>
               </li>
-              <li>
-                <a href='#contact'>
+              <li className={buttonActive === 'contact' ? 'active' : ''}>
+                <a
+                  href='#contact'
+                  onClick={() => {
+                    setButtonActive('contact');
+                  }}
+                >
                   <FormattedMessage
                     id='sidebar.contact'
                     defaultMessage='Contact me'
