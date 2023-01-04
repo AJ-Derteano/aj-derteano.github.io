@@ -116,7 +116,10 @@ const SidebarStyle = styled.div`
       li{
         &.active {
           background-color: #fff;
-          color: #fff;
+
+          a {
+            color: #5bc0de;
+          }
         }
 
         &:hover {
