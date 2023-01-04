@@ -11,9 +11,9 @@ const MainStyle = styled.div`
   border-bottom: 3px solid rgba(250, 250, 250, 0.25);
 
   @media screen and (max-width: 1281px) {
-    width: 80%;
-    left: 10%;
-    margin-top: 4rem;
+    width: 85%;
+    left: 5%;
+    margin-top: 5rem;
   }
 
 `;
