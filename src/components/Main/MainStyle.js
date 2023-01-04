@@ -8,7 +8,14 @@ const MainStyle = styled.div`
   position: relative;
   min-height: 100vh;
   padding-bottom: 80px;
-  border-bottom: 3px solid rgba(250, 250, 250, 0.25)
+  border-bottom: 3px solid rgba(250, 250, 250, 0.25);
+
+  @media screen and (max-width: 1281px) {
+    width: 80%;
+    left: 10%;
+    margin-top: 4rem;
+  }
+
 `;
 
 export default MainStyle;

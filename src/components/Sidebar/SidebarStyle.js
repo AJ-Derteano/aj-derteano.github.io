@@ -24,7 +24,7 @@ const SidebarStyle = styled.div`
     left: 0;
   }
   
-  @media screen and (max-width: 1281px){
+  @media screen and (max-width: 1281px) {
     width: 25%;
     left: 0%;
   }
