@@ -1,13 +1,12 @@
-import React from "react";
-import "normalize.css";
-import Sidebar from "./components/Sidebar/Sidebar";
+import 'normalize.css';
+import Sidebar from './components/Sidebar/Sidebar';
 
-function App() {
+const App = () => {
   return (
     <>
       <Sidebar />
     </>
   );
-}
+};
 
 export default App;

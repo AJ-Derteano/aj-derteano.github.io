@@ -1,4 +1,9 @@
 {
   "sidebar.name": "AJ Derteano",
-  "sidebar.profession": "Desarrollador de software"
+  "sidebar.profession": "Desarrollador de software",
+  "sidebar.about-me": "Sobre mi",
+  "sidebar.skill": "Mis habilidades",
+  "sidebar.projects": "Mis projectos",
+  "sidebar.contact": "Contacta me",
+  "sidebar.copy-rigth": "© 2023 AJ Dev - Todos los derechos reservados."
 }

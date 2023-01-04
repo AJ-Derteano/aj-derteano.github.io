@@ -1,49 +1,132 @@
-import SidebarStyle from "./SidebarStyle";
-import { FormattedMessage } from "react-intl";
-import { useContext } from "react";
-import { LangContext } from "../../context/LangContext";
+import { useContext, useState } from 'react';
+import { FormattedMessage } from 'react-intl';
+import {
+  AiFillGithub,
+  AiFillLinkedin,
+  AiOutlineMenu,
+  AiFillCloseCircle,
+} from 'react-icons/ai';
+import SidebarStyle from './SidebarStyle';
+import { LangContext } from '../../context/LangContext';
+// import { Route, Routes } from 'react-router-dom';
 
 const Sidebar = () => {
   const language = useContext(LangContext);
+  const [openMenu, setOpenMenu] = useState(false);
 
   return (
-    <SidebarStyle id="menu">
-      <div className="container">
-        <div className="image">
-          <a href="#">
+    <SidebarStyle id='menu' className={openMenu ? 'open' : ''}>
+      <div className='close-button'>
+        <span
+          onClick={() => {
+            setOpenMenu(!openMenu);
+          }}
+        >
+          {openMenu ? <AiFillCloseCircle /> : <AiOutlineMenu />}
+        </span>
+      </div>
+      <div className='container'>
+        <div className='image'>
+          <a href='./'>
             <img
-              src="https://avatars.githubusercontent.com/u/55628495"
-              alt="Perfil"
+              src='https://avatars.githubusercontent.com/u/55628495'
+              alt='Perfil'
             />
           </a>
         </div>
-        <div className="author-content">
+        <div className='author-content'>
           <h4>
-            <FormattedMessage id="sidebar.name" defaultMessage="AJ Derteano" />
+            <FormattedMessage id='sidebar.name' defaultMessage='AJ Derteano' />
           </h4>
           <span>
-            <FormattedMessage id="sidebar.profession" defaultMessage="" />
+            <FormattedMessage id='sidebar.profession' defaultMessage='' />
           </span>
         </div>
-        <div className="social-links">Social links</div>
+        <div className='main-nav'>
+          <nav className='main-nav' role='navigation'>
+            <ul className='main-menu'>
+              <li>
+                <a href='#about-me'>
+                  <FormattedMessage
+                    id='sidebar.about-me'
+                    defaultMessage='About me'
+                  />
+                </a>
+              </li>
+              <li>
+                <a href='#skill'>
+                  <FormattedMessage id='sidebar.skill' defaultMessage='Skill' />
+                </a>
+              </li>
+              <li>
+                <a href='#projects'>
+                  <FormattedMessage
+                    id='sidebar.projects'
+                    defaultMessage='My projects'
+                  />
+                </a>
+              </li>
+              <li>
+                <a href='#contact'>
+                  <FormattedMessage
+                    id='sidebar.contact'
+                    defaultMessage='Contact me'
+                  />
+                </a>
+              </li>
+            </ul>
+          </nav>
+          {/* <Routes>
+            <Route path='/about-me' element={<Test />} />
+          </Routes> */}
+        </div>
         <div>
-          <button
+          <span
+            className='language-button'
             onClick={() => {
-              language.handleLanguage("es-PE");
+              language.handleLanguage('es-PE');
             }}
           >
             ES
-          </button>{" "}
-          |{" "}
-          <button
+          </span>{' '}
+          |{' '}
+          <span
+            className='language-button'
             onClick={() => {
-              language.handleLanguage("en-US");
+              language.handleLanguage('en-US');
             }}
           >
             EN
-          </button>
+          </span>
         </div>
-        <div className="copy-right">footer</div>
+        <div className='social-network'>
+          <ul className='social-icons'>
+            <li>
+              <a
+                href='https://github.com/AJ-Derteano'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <AiFillGithub />
+              </a>
+            </li>
+            <li>
+              <a
+                href='https://www.linkedin.com/in/aj-derteano/'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <AiFillLinkedin />
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div className='copyright-text'>
+          <FormattedMessage
+            id='sidebar.copy-rigth'
+            defaultMessage='All rights reserved.'
+          />
+        </div>
       </div>
     </SidebarStyle>
   );
