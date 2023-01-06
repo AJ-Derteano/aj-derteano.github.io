@@ -8,6 +8,7 @@ import {
   AiFillLinkedin,
   AiOutlineMenu,
   AiFillCloseCircle,
+  AiOutlineLine,
 } from 'react-icons/ai';
 
 const Sidebar = () => {
@@ -119,7 +120,7 @@ const Sidebar = () => {
             </ul>
           </nav>
         </div>
-        <div>
+        <div className='language-buttons'>
           <span
             className='language-button'
             onClick={() => {
@@ -127,8 +128,8 @@ const Sidebar = () => {
             }}
           >
             ES
-          </span>{' '}
-          |{' '}
+          </span>
+          <AiOutlineLine className='separator' />
           <span
             className='language-button'
             onClick={() => {
@@ -191,10 +192,6 @@ export const SidebarStyle = styled.div`
     display: none;
   }
 
-  &.open {
-    left: 0;
-  }
-
   @media screen and (max-width: 1281px) {
     width: 25%;
     left: 0%;
@@ -214,6 +211,10 @@ export const SidebarStyle = styled.div`
       display: block;
       padding: 5px;
       right: -50px;
+    }
+
+    &.open {
+      left: 0;
     }
   }
 
@@ -247,30 +248,39 @@ export const SidebarStyle = styled.div`
       }
     }
 
-    .language-button {
-      display: inline-block;
-      text-align: center;
-      width: 40px;
-      height: 40px;
-      line-height: 40px;
+    .language-buttons {
+      margin: 1rem 0;
 
-      &:hover {
-        cursor: pointer;
-        background-color: #fff;
-        color: #5bc0de;
-        -webkit-transition: background-color 0.3s linear;
-        -ms-transition: background-color 0.3s linear;
-        transition: background-color 0.3s linear;
+      .separator {
+        transform: rotate(90deg);
       }
 
-      @media screen and (max-width: 1281px) {
-        width: 28px;
-        height: 28px;
-        line-height: 28px;
-      }
+      .language-button {
+        display: inline-block;
+        text-align: center;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 1.2rem;
 
-      @media screen and (max-width: 780px) {
-        margin-top: 2rem;
+        &:hover {
+          cursor: pointer;
+          background-color: #fff;
+          color: #5bc0de;
+          -webkit-transition: background-color 0.3s linear;
+          -ms-transition: background-color 0.3s linear;
+          transition: background-color 0.3s linear;
+        }
+
+        @media screen and (max-width: 1281px) {
+          width: 28px;
+          height: 28px;
+          line-height: 28px;
+        }
+
+        @media screen and (max-width: 780px) {
+          margin-top: 2rem;
+        }
       }
     }
   }
@@ -336,6 +346,7 @@ export const SidebarStyle = styled.div`
 
     .social-icons {
       width: 100%;
+      margin-top: 1rem;
       padding: 0;
       display: flex;
       align-items: center;
@@ -344,17 +355,17 @@ export const SidebarStyle = styled.div`
 
       li {
         a {
-          margin-left: 12px;
-          width: 32px;
-          height: 32px;
-          padding: 10px;
-          display: inline-block;
+          width: 45px;
+          height: 45px;
+          font-size: 40px;
+          line-height: 40px;
           text-align: center;
-          line-height: 36px;
-          background-color: rgba(0, 0, 0, 0.2);
+          margin: 0 12px;
           color: #fff;
-          font-size: 32px;
+          display: inline-block;
+          padding: 2.5px;
           transition: all 0.5s;
+          background-color: rgba(0, 0, 0, 0.2);
 
           &:hover {
             color: #5bc0de;
@@ -362,14 +373,14 @@ export const SidebarStyle = styled.div`
           }
         }
 
-        @media screen and (max-width: 1281px) {
+        @media screen and (max-width: 1280px) {
           a {
-            margin-left: 8px;
-            width: 24px;
-            height: 24px;
-            padding: 5px;
-            line-height: 24px;
-            font-size: 24px;
+            margin: 0 8px;
+            width: 30px;
+            height: 30px;
+            padding: 2.5px;
+            line-height: 25px;
+            font-size: 25px;
           }
         }
       }
