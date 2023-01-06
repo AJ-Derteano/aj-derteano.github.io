@@ -5,5 +5,7 @@
   "sidebar.skill": "Skill",
   "sidebar.projects": "My projects",
   "sidebar.contact": "Contact me",
-  "sidebar.copy-rigth": "© 2023 AJ Dev - All rights reserved."
+  "sidebar.attributes": "Attributes",
+  "sidebar.copy-rigth": "© 2023 AJ Dev - All rights reserved.",
+  "main.about-me.title": "About me"
 }
