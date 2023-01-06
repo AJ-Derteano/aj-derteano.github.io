@@ -29,6 +29,11 @@ export const PostStyle = styled.section`
   margin: 4rem 0;
   direction: ${(props) => props.direction};
 
+  @media screen and (max-width: 780px) {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
   .article-left img {
     width: 100%;
   }
