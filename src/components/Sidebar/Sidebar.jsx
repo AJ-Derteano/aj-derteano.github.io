@@ -2,7 +2,6 @@ import { useContext, useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 import styled from 'styled-components';
 import { LangContext } from '../../context/LangContext';
-import { Link } from 'react-router-dom';
 import {
   AiFillGithub,
   AiFillLinkedin,
@@ -10,11 +9,18 @@ import {
   AiFillCloseCircle,
   AiOutlineLine,
 } from 'react-icons/ai';
+import { SidebarButton } from '../SidebarButton';
 
-const Sidebar = () => {
+const Sidebar = ({ links }) => {
   const language = useContext(LangContext);
   const [openMenu, setOpenMenu] = useState(false);
   const [buttonActive, setButtonActive] = useState('');
+
+  const handleClickLink = (e) => {
+    const { name } = e.target;
+    setOpenMenu(false);
+    setButtonActive(name);
+  };
 
   return (
     <SidebarStyle id='menu' className={openMenu ? 'open' : ''}>
@@ -50,73 +56,21 @@ const Sidebar = () => {
         <div className='main-nav'>
           <nav className='main-nav' role='navigation'>
             <ul className='main-menu'>
-              <li className={buttonActive === 'about-me' ? 'active' : ''}>
-                <Link
-                  to='/'
-                  relative='path'
-                  onClick={() => {
-                    setButtonActive('about-me');
-                  }}
-                >
-                  <FormattedMessage
-                    id='sidebar.about-me'
-                    defaultMessage='About me'
-                  />
-                </Link>
-              </li>
-              <li className={buttonActive === 'skill' ? 'active' : ''}>
-                <Link
-                  to='/skill'
-                  relative='path'
-                  onClick={() => {
-                    setButtonActive('skill');
-                  }}
-                >
-                  <FormattedMessage id='sidebar.skill' defaultMessage='Skill' />
-                </Link>
-              </li>
-              <li className={buttonActive === 'projects' ? 'active' : ''}>
-                <Link
-                  to='/projects'
-                  relative='path'
-                  onClick={() => {
-                    setButtonActive('projects');
-                  }}
-                >
-                  <FormattedMessage
-                    id='sidebar.projects'
-                    defaultMessage='My projects'
-                  />
-                </Link>
-              </li>
-              <li className={buttonActive === 'contact' ? 'active' : ''}>
-                <Link
-                  to='/contact-me'
-                  relative='path'
-                  onClick={() => {
-                    setButtonActive('contact');
-                  }}
-                >
-                  <FormattedMessage
-                    id='sidebar.contact'
-                    defaultMessage='Contact me'
-                  />
-                </Link>
-              </li>
-              <li className={buttonActive === 'contact' ? 'active' : ''}>
-                <Link
-                  to='/attributes'
-                  relative='path'
-                  onClick={() => {
-                    setButtonActive('attributes');
-                  }}
-                >
-                  <FormattedMessage
-                    id='sidebar.attributes'
-                    defaultMessage='Attributes'
-                  />
-                </Link>
-              </li>
+              {links.map((link) => (
+                <SidebarButton
+                  key={link.name}
+                  name={link.name}
+                  to={link.to}
+                  text={
+                    <FormattedMessage
+                      id={link.id_text}
+                      defaultMessage={link.text}
+                    />
+                  }
+                  handleClickLink={handleClickLink}
+                  active={buttonActive}
+                />
+              ))}
             </ul>
           </nav>
         </div>
@@ -187,7 +141,6 @@ export const SidebarStyle = styled.div`
     width: 40px;
     height: 40px;
     font-size: 40px;
-    /* background-color: rgba(255, 255, 255, 0.9); */
     color: #5bc0de;
     display: none;
   }
@@ -294,40 +247,7 @@ export const SidebarStyle = styled.div`
       padding: 0;
       border-bottom: 2px solid #fff;
 
-      li {
-        &.active {
-          background-color: #fff;
-
-          a {
-            color: #5bc0de;
-          }
-        }
-
-        &:hover {
-          background-color: #fff;
-          -webkit-transition: background-color 0.3s linear;
-          -ms-transition: background-color 0.3s linear;
-          transition: background-color 0.3s linear;
-        }
-      }
-
-      a {
-        color: #fff;
-        height: 70px;
-        line-height: 70px;
-        display: inline-block;
-        font-size: 16px;
-        font-weight: 700;
-        width: 100%;
-        transition: all 0.5s;
-        border-top: 2px solid #fff;
-
-        &:hover {
-          color: #5bc0de;
-        }
-      }
-
-      @media screen and (max-width: 1281px) {
+      @media screen and (max-width: 1280px) {
         a {
           height: 40px;
           line-height: 40px;

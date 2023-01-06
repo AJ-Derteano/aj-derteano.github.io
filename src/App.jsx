@@ -10,10 +10,48 @@ import {
   NotFound,
 } from './pages';
 
+const buttons = [
+  {
+    id_text: 'sidebar.about-me',
+    text: 'Sobre mi',
+    name: 'about-me',
+    to: '/',
+    relative: 'path',
+  },
+  {
+    id_text: 'sidebar.skill',
+    text: 'Mis habilidades',
+    name: 'skill',
+    to: '/skill',
+    relative: 'path',
+  },
+  {
+    id_text: 'sidebar.projects',
+    text: 'Mis proyectos',
+    name: 'projects',
+    to: '/projects',
+    relative: 'path',
+  },
+  {
+    id_text: 'sidebar.contact',
+    text: 'Contactame',
+    name: 'contact',
+    to: '/contact-me',
+    relative: 'path',
+  },
+  {
+    id_text: 'sidebar.attributes',
+    text: 'Atribuciones',
+    name: 'attributes',
+    to: '/attributes',
+    relative: 'path',
+  },
+];
+
 const App = () => {
   return (
     <BackgroundImage>
-      <Sidebar />
+      <Sidebar links={buttons} />
       <Main>
         <Routes>
           <Route path='/' element={<AboutMe />} />

@@ -1,20 +1,21 @@
 import styled from 'styled-components';
 
-const Post = ({ imgSrc, direction = 'ltr' }) => {
+const Post = ({
+  imgSrc,
+  imgAlt,
+  direction = 'ltr',
+  title = 'Title section',
+  description = 'Description',
+}) => {
   return (
     <PostStyle direction={direction}>
       <article className='article-left'>
-        <img src={imgSrc} />
+        <img src={imgSrc} alt={imgAlt} />
       </article>
       <article className='article-right'>
         <div>
-          <h3>Title section post</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores ut
-            sint, nesciunt, aliquid, quibusdam impedit ipsam doloribus odio
-            harum eligendi dignissimos accusamus commodi tenetur magnam! Commodi
-            voluptatem voluptates porro minus.
-          </p>
+          <h3>{title}</h3>
+          <p>{description}</p>
         </div>
       </article>
     </PostStyle>
@@ -27,6 +28,7 @@ export const PostStyle = styled.section`
   grid-gap: 10px;
   grid-auto-rows: minmax(200px, auto);
   margin: 4rem 0;
+  text-align: left;
   direction: ${(props) => props.direction};
 
   @media screen and (max-width: 780px) {
