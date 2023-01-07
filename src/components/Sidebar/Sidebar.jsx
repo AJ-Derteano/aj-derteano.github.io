@@ -9,7 +9,7 @@ import {
   AiFillCloseCircle,
   AiOutlineLine,
 } from 'react-icons/ai';
-import { SidebarButton } from '../SidebarButton';
+import LinkToPage from '../LinkToPage/LinkToPage';
 
 const Sidebar = ({ links }) => {
   const language = useContext(LangContext);
@@ -57,7 +57,7 @@ const Sidebar = ({ links }) => {
           <nav className='main-nav' role='navigation'>
             <ul className='main-menu'>
               {links.map((link) => (
-                <SidebarButton
+                <LinkToPage
                   key={link.name}
                   name={link.name}
                   to={link.to}

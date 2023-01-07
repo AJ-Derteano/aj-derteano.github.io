@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-const SidebarButton = ({
+const LinkToPage = ({
   text = 'button',
   name = 'button',
   to,
@@ -10,7 +10,7 @@ const SidebarButton = ({
   active,
 }) => {
   return (
-    <SidebarButtonStyle className={active === name ? 'active' : ''}>
+    <LinkToPageStyle className={active === name ? 'active' : ''}>
       <Link
         name={name}
         to={to}
@@ -21,11 +21,11 @@ const SidebarButton = ({
       >
         {text}
       </Link>
-    </SidebarButtonStyle>
+    </LinkToPageStyle>
   );
 };
 
-export const SidebarButtonStyle = styled.li`
+export const LinkToPageStyle = styled.li`
   &.active {
     background-color: #fff;
 
@@ -58,4 +58,4 @@ export const SidebarButtonStyle = styled.li`
   }
 `;
 
-export default SidebarButton;
+export default LinkToPage;

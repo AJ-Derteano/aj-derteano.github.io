@@ -6,11 +6,11 @@ import {
   Attributes,
   ContactMe,
   MyProjects,
-  Skill,
+  Skills,
   NotFound,
 } from './pages';
 
-const buttons = [
+const links = [
   {
     id_text: 'sidebar.about-me',
     text: 'Sobre mi',
@@ -19,10 +19,10 @@ const buttons = [
     relative: 'path',
   },
   {
-    id_text: 'sidebar.skill',
+    id_text: 'sidebar.skills',
     text: 'Mis habilidades',
-    name: 'skill',
-    to: '/skill',
+    name: 'skills',
+    to: '/skills',
     relative: 'path',
   },
   {
@@ -51,11 +51,11 @@ const buttons = [
 const App = () => {
   return (
     <BackgroundImage>
-      <Sidebar links={buttons} />
+      <Sidebar links={links} />
       <Main>
         <Routes>
           <Route path='/' element={<AboutMe />} />
-          <Route path='/skill' element={<Skill />} />
+          <Route path='/skills' element={<Skills />} />
           <Route path='/projects' element={<MyProjects />} />
           <Route path='/contact-me' element={<ContactMe />} />
           <Route path='/attributes' element={<Attributes />} />
