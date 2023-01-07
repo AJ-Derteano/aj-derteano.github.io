@@ -17,7 +17,7 @@ const AboutMe = () => {
         <FormattedMessage id='about-me.text-1' defaultMessage='' />
       </p>
 
-      <Post imgSrc='./src/assets/dev_productivity.svg' imgAlt='productivity' />
+      <Post imgSrc='/dev_productivity.svg' imgAlt='productivity' />
 
       <UnderlineTitle
         width='100%'
@@ -28,7 +28,7 @@ const AboutMe = () => {
 
       <Post
         direction='rtl'
-        imgSrc='./src/assets/inspiration.svg'
+        imgSrc='/inspiration.svg'
         imgAlt='Inspiration'
       />
 

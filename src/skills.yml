@@ -1,0 +1,25 @@
+icon:
+  type:
+    frondend:
+      - icon: 'bootstrap.svg'
+        path: './src/assets/skill_icons/'
+        name: 'Bootstrap'
+        color: '#7952B3'
+      - icon: 'css3.svg'
+        path: './src/assets/skill_icons/'
+        name: 'CSS3'
+        color: '#1572B6'
+    backend:
+      - icon: 'dotenv.svg'
+        path: './src/assets/skill_icons/'
+        name: 'DOTENV'
+        color: '#ECD53F'
+      - icon: 'express.svg'
+        path: './src/assets/skill_icons/'
+        name: 'Express'
+        color: '#000000'
+    tools:
+      - icon: 'docker.svg'
+        path: './src/assets/skill_icons/'
+        name: 'Docker'
+        color: '#2496ED'

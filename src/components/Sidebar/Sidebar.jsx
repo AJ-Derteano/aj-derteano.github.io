@@ -141,7 +141,7 @@ export const SidebarStyle = styled.div`
     width: 40px;
     height: 40px;
     font-size: 40px;
-    color: #5bc0de;
+    color: #4d4d4d;
     display: none;
   }
 
@@ -187,6 +187,7 @@ export const SidebarStyle = styled.div`
 
     .author-content {
       text-align: center;
+      margin: 1rem 0;
 
       h4 {
         font-size: 26px;
@@ -215,6 +216,7 @@ export const SidebarStyle = styled.div`
         height: 40px;
         line-height: 40px;
         font-size: 1.2rem;
+        border-radius: 5px;
 
         &:hover {
           cursor: pointer;
@@ -277,6 +279,7 @@ export const SidebarStyle = styled.div`
         a {
           width: 45px;
           height: 45px;
+          border-radius: 5px;
           font-size: 40px;
           line-height: 40px;
           text-align: center;

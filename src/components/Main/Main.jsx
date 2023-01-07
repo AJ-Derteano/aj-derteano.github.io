@@ -6,7 +6,7 @@ const Main = ({ children }) => {
 };
 
 export const MainStyle = styled.div`
-  color: #fff;
+  color: #000;
   width: 55%;
   min-height: calc(100vh - 4rem);
   position: relative;

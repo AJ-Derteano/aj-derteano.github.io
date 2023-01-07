@@ -11,10 +11,7 @@ export const BackgroundImageStyle = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  /* background: url('./src/assets/code_typing_concep_illustration.jpg')
-  no-repeat
-    center center fixed; */
-  background: url('./src/assets/our_neighborhood.svg') no-repeat center center fixed;
+  /* background: url('/christopher-gower.jpg') no-repeat center center fixed; */
   background-size: cover;
   z-index: -99;
 
@@ -27,7 +24,7 @@ export const BackgroundImageStyle = styled.div`
     display: inline-block;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    /* background-color: rgba(0, 0, 0, 0.1); */
     z-index: -50;
   }
 `;
