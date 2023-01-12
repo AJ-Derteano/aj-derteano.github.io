@@ -12,19 +12,20 @@ export const MainStyle = styled.div`
   position: relative;
   right: 15%;
   left: 35%;
-  margin-top: 4rem;
+  margin: 4rem 0;
 
   @media screen and (max-width: 1280px) {
     width: 65%;
     left: 30%;
-    margin-top: 4rem;
   }
 
   @media screen and (max-width: 780px) {
-    width: 90%;
-    left: 5%;
-    min-height: calc(100vh - 5rem);
-    margin-top: 5rem;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    left: 0;
+    min-height: calc(100vh - 4rem);
+    margin: 4rem 0;
   }
 `;
 

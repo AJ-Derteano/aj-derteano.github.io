@@ -1,25 +1,97 @@
-icon:
-  type:
+icons:
+  default_path: './src/assets/skill_icons/'
+  group_by:
     frondend:
+      - icon: 'react.svg'
+        name: 'React'
+        color: '#61DAFB'
+        web: https://reactjs.org/
+      - icon: 'handlebarsdotjs.svg'
+        name: 'Handlebars.js'
+        color: '#000000'
+        web: https://handlebarsjs.com/
       - icon: 'bootstrap.svg'
-        path: './src/assets/skill_icons/'
         name: 'Bootstrap'
         color: '#7952B3'
+        web: https://getbootstrap.com/
+      - icon: 'html5.svg'
+        name: 'HTML5'
+        color: '#E34F26'
+        web: https://developer.mozilla.org/en-US/docs/Web/HTML
       - icon: 'css3.svg'
-        path: './src/assets/skill_icons/'
         name: 'CSS3'
         color: '#1572B6'
+        web: https://developer.mozilla.org/en-US/docs/Web/CSS
+      - icon: 'sass.svg'
+        name: 'Sass'
+        color: '#CC6699'
+        web: https://sass-lang.com/
+      - icon: 'javascript.svg'
+        name: 'JavaScript'
+        color: '#F7DF1E'
+        web: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+      - icon: 'typescript.svg'
+        name: 'TypeScript'
+        color: '#3178C6'
+        web: https://www.typescriptlang.org/
+      - icon: 'jquery.svg'
+        name: 'jQuery'
+        color: '#0769AD'
+        web: https://jquery.com/
     backend:
-      - icon: 'dotenv.svg'
-        path: './src/assets/skill_icons/'
-        name: 'DOTENV'
-        color: '#ECD53F'
+      - icon: 'nodedotjs.svg'
+        name: 'Node.js'
+        color: '#339933'
+        web: https://nodejs.org/en/
       - icon: 'express.svg'
-        path: './src/assets/skill_icons/'
         name: 'Express'
         color: '#000000'
+        web: https://expressjs.com/
+      - icon: 'dotenv.svg'
+        name: 'DOTENV'
+        color: '#ECD53F'
+        web: https://github.com/motdotla/dotenv#readme
+      - icon: 'php.svg'
+        name: 'PHP'
+        color: '#777BB4'
+        web: https://www.php.net/manual/en/intro-whatis.php
+      - icon: 'mongodb.svg'
+        name: 'MongoDB'
+        color: '#47A248'
+        web: https://www.mongodb.com/
+      - icon: 'mysql.svg'
+        name: 'MySQL'
+        color: '#4479A1'
+        web: https://www.mysql.com/
+      - icon: 'postgresql.svg'
+        name: 'PostgreSQL'
+        color: '#4169E1'
+        web: https://www.postgresql.org/
+    testing:
+      - icon: 'jest.svg'
+        name: 'Jest'
+        color: '#C21325'
+        web: https://jestjs.io/
+      - icon: 'selenium.svg'
+        name: 'Selenium'
+        color: '#43B02A'
+        web: https://www.selenium.dev/
+    so:
+      - icon: 'linux.svg'
+        name: 'Linux'
+        color: '#FCC624'
+        web: 
     tools:
+      - icon: 'webpack.svg'
+        name: 'Webpack'
+        color: '#8DD6F9'
+        web: https://webpack.js.org/
+      - icon: 'github.svg'
+        name: 'Github'
+        color: '#181717'
+        web: https://github.com/
       - icon: 'docker.svg'
-        path: './src/assets/skill_icons/'
         name: 'Docker'
         color: '#2496ED'
+        web: https://www.docker.com/
+

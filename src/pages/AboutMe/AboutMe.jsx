@@ -13,9 +13,11 @@ const AboutMe = () => {
 
       <UnderlineTitle margin='2rem auto' />
 
-      <p className='title-description'>
-        <FormattedMessage id='about-me.text-1' defaultMessage='' />
-      </p>
+      <div>
+        <p className='title-description'>
+          <FormattedMessage id='about-me.text-1' defaultMessage='' />
+        </p>
+      </div>
 
       <Post imgSrc='/dev_productivity.svg' imgAlt='productivity' />
 
@@ -26,18 +28,7 @@ const AboutMe = () => {
         bgColor='#cbcbcb48'
       />
 
-      <Post
-        direction='rtl'
-        imgSrc='/inspiration.svg'
-        imgAlt='Inspiration'
-      />
-
-      <UnderlineTitle
-        width='100%'
-        height='2px'
-        margin='2rem auto'
-        bgColor='#cbcbcb'
-      />
+      <Post direction='rtl' imgSrc='/inspiration.svg' imgAlt='Inspiration' />
     </AboutMeStyle>
   );
 };
@@ -59,6 +50,7 @@ export const AboutMeStyle = styled.section`
 
   .title-description {
     text-align: center;
+    margin: 0 auto;
   }
 `;
 

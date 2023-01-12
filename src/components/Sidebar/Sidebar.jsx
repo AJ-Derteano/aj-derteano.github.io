@@ -145,7 +145,12 @@ export const SidebarStyle = styled.div`
     display: none;
   }
 
-  @media screen and (max-width: 1281px) {
+  @media screen and (max-width: 1366px) {
+    width: 25%;
+    left: 0%;
+  }
+
+  @media screen and (max-width: 1280px) {
     width: 25%;
     left: 0%;
   }
@@ -178,6 +183,10 @@ export const SidebarStyle = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
+    @media screen and (max-width: 1366px) {
+      margin-top: 3vh;
+    }
 
     a img {
       width: 140px;
@@ -227,7 +236,13 @@ export const SidebarStyle = styled.div`
           transition: background-color 0.3s linear;
         }
 
-        @media screen and (max-width: 1281px) {
+        @media screen and (max-width: 1366px) {
+          width: 28px;
+          height: 28px;
+          line-height: 28px;
+        }
+
+        @media screen and (max-width: 1280px) {
           width: 28px;
           height: 28px;
           line-height: 28px;
@@ -245,9 +260,21 @@ export const SidebarStyle = styled.div`
     margin-top: 1rem;
     text-align: center;
 
+    @media screen and (max-width: 1366px) {
+      margin-top: 0rem;
+    }
+
     .main-menu {
       padding: 0;
       border-bottom: 2px solid #fff;
+
+      @media screen and (max-width: 1366px) {
+        a {
+          height: 40px;
+          line-height: 40px;
+          font-size: 14px;
+        }
+      }
 
       @media screen and (max-width: 1280px) {
         a {
@@ -293,6 +320,17 @@ export const SidebarStyle = styled.div`
           &:hover {
             color: #5bc0de;
             background-color: #fff;
+          }
+        }
+
+        @media screen and (max-width: 1366px) {
+          a {
+            margin: 0 8px;
+            width: 30px;
+            height: 30px;
+            padding: 2.5px;
+            line-height: 25px;
+            font-size: 25px;
           }
         }
 

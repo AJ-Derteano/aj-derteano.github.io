@@ -10,7 +10,6 @@ const Post = ({
   return (
     <PostStyle direction={direction}>
       <article className='article-left'>
-        <div />
         <img src={imgSrc} alt={imgAlt} />
       </article>
       <article className='article-right'>

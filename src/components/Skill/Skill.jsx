@@ -2,14 +2,23 @@ import styled from 'styled-components';
 
 const Skill = ({
   technology,
+  information,
+  web,
   svgSrc,
-  width = '40px',
-  height = '40px',
+  width = '80px',
+  height = '80px',
   color = '#000',
   iconColor = '#fff',
 }) => {
+  const handleClick = (url) => {
+    window.open(url);
+  };
+
   return (
     <SkillStyle
+      onClick={(e) => {
+        handleClick(web);
+      }}
       iconColor={iconColor}
       color={color}
       src={svgSrc}
@@ -20,13 +29,22 @@ const Skill = ({
         <div />
       </span>
       <h4>{technology}</h4>
+      {information ? <p>{information}</p> : ''}
     </SkillStyle>
   );
 };
 
-export const SkillStyle = styled.article`
+const SkillStyle = styled.article`
   display: inline-block;
   text-align: center;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.2);
+    span {
+      cursor: pointer;
+    }
+  }
 
   h4 {
     color: ${(props) => props.color};
@@ -36,6 +54,7 @@ export const SkillStyle = styled.article`
     display: inline-block;
     width: ${(props) => props.width};
     height: ${(props) => props.height};
+    /* padding: 0.5rem; */
 
     div {
       height: 100%;

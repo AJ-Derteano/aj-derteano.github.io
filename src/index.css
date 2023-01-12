@@ -18,6 +18,11 @@ ul {
   list-style: none;
 }
 
+p {
+  max-width: 75ch;
+  letter-spacing: 0.25px;
+}
+
 blockquote,
 q {
   quotes: none;
