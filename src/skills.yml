@@ -1,7 +1,7 @@
 icons:
   default_path: './src/assets/skill_icons/'
   group_by:
-    frondend:
+    frontend:
       - icon: 'react.svg'
         name: 'React'
         color: '#61DAFB'
@@ -80,7 +80,15 @@ icons:
       - icon: 'linux.svg'
         name: 'Linux'
         color: '#FCC624'
-        web: 
+        web:
+      - icon: 'windows.svg'
+        name: 'Windows'
+        color: '#0078D6'
+        web: https://www.microsoft.com/en-US/windows/?r=1
+      - icon: 'macos.svg'
+        name: 'macOS'
+        color: '#000000'
+        web:
     tools:
       - icon: 'webpack.svg'
         name: 'Webpack'
@@ -94,4 +102,7 @@ icons:
         name: 'Docker'
         color: '#2496ED'
         web: https://www.docker.com/
-
+      - icon: 'scrumalliance.svg'
+        name: 'Scrum Alliance'
+        color: '#009FDA'
+        web: https://www.scrumalliance.org/

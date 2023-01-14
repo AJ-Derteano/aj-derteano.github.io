@@ -1,7 +1,10 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const Skill = ({
+  category,
   technology,
+  active,
   information,
   web,
   svgSrc,
@@ -15,22 +18,28 @@ const Skill = ({
   };
 
   return (
-    <SkillStyle
-      onClick={(e) => {
-        handleClick(web);
-      }}
-      iconColor={iconColor}
-      color={color}
-      src={svgSrc}
-      width={width}
-      height={height}
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
     >
-      <span>
-        <div />
-      </span>
-      <h4>{technology}</h4>
-      {information ? <p>{information}</p> : ''}
-    </SkillStyle>
+      <SkillStyle
+        onClick={(e) => {
+          handleClick(web);
+        }}
+        iconColor={iconColor}
+        color={color}
+        src={svgSrc}
+        width={width}
+        height={height}
+      >
+        <span>
+          <div />
+        </span>
+        <h4>{technology}</h4>
+        {information ? <p>{information}</p> : ''}
+      </SkillStyle>
+    </motion.div>
   );
 };
 
@@ -54,7 +63,6 @@ const SkillStyle = styled.article`
     display: inline-block;
     width: ${(props) => props.width};
     height: ${(props) => props.height};
-    /* padding: 0.5rem; */
 
     div {
       height: 100%;

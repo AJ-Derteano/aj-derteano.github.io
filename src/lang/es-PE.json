@@ -11,5 +11,11 @@
   "about-me.text-1": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni provident, laborum debitis suscipit tenetur aliquam laudantium sunt totam tempore quasi molestiae est sequi beatae fugit optio. Ex deleniti laboriosam a.",
   "skill.hardskill": "Habilidades duras",
   "skill.softskill.description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati, facilis. Sequi, nisi nam eaque similique nihil iusto provident ipsa itaque excepturi minus fuga explicabo officiis tempora, praesentium cupiditate, reprehenderit amet? Cumque, quidem odio. Voluptate laudantium laboriosam temporibus distinctio earum deserunt in accusantium ipsam veniam et fugit expedita molestias, officia corrupti sunt ea similique dolorem sed dignissimos unde! Nam, officiis sit? Perferendis recusandae laboriosam nostrum distinctio minus omnis iure eos animi. Repudiandae modi, facere eaque velit et debitis deleniti accusamus minima rerum quod in necessitatibus obcaecati fuga esse ea similique impedit. Expedita architecto illum quisquam aliquam! Reiciendis consequuntur eum fugiat sed voluptatibus expedita ad nisi? Doloribus tempore soluta necessitatibus hic provident quisquam, sed eius ratione suscipit nam molestias nulla, itaque nihil! Minima error quo amet illum architecto molestiae omnis eum esse magnam quas ipsa fugit fuga quam dolores odio, debitis blanditiis necessitatibus doloremque id earum! Praesentium fugiat maiores eaque mollitia possimus!",
-  "skill.softskill": "Habilidades blandas"
+  "skill.softskill": "Habilidades blandas",
+  "skill.category.all": "Todos",
+  "skill.category.frontend": "Frontend",
+  "skill.category.backend": "Backend",
+  "skill.category.testing": "Testing",
+  "skill.category.so": "SO",
+  "skill.category.tools": "Otros"
 }
