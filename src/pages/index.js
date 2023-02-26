@@ -1,6 +1,3 @@
-export * from './AboutMe';
-export * from './Attributes';
-export * from './ContactMe';
-export * from './MyProjects';
-export * from './NotFound';
-export * from './Skills';
+export { default as AboutMe } from './AboutMe';
+export { default as NotFound } from './NotFound';
+export * from './index';

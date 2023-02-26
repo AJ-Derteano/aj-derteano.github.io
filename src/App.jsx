@@ -1,14 +1,8 @@
 import 'normalize.css';
 import { Route, Routes } from 'react-router-dom';
-import { BackgroundImage, Main, Sidebar } from './components';
-import {
-  AboutMe,
-  Attributes,
-  ContactMe,
-  MyProjects,
-  Skills,
-  NotFound,
-} from './pages';
+import { Footer, NavBar, SiderBar } from './components';
+import CustomLayout from './components/CustomLayout';
+import { AboutMe, NotFound } from './pages';
 
 const links = [
   {
@@ -50,19 +44,17 @@ const links = [
 
 const App = () => {
   return (
-    <BackgroundImage>
-      <Sidebar links={links} />
-      <Main>
+    <CustomLayout
+      siderBar={<SiderBar />}
+      header={<NavBar />}
+      footer={<Footer />}
+      content={
         <Routes>
-          <Route path='/' element={<AboutMe />} />
-          <Route path='/skills' element={<Skills />} />
-          <Route path='/projects' element={<MyProjects />} />
-          <Route path='/contact-me' element={<ContactMe />} />
-          <Route path='/attributes' element={<Attributes />} />
-          <Route path='*' element={<NotFound />} />
+          <Route exact path='/' element={<AboutMe />} />
+          <Route exact path='*' element={<NotFound />} />
         </Routes>
-      </Main>
-    </BackgroundImage>
+      }
+    />
   );
 };
 

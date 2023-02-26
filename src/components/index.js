@@ -1,8 +1,5 @@
-export * from './BackgroundImage';
-export * from './ButtonCategory';
-export * from './LinkToPage';
-export * from './Main';
-export * from './Post';
-export * from './Sidebar';
-export * from './Skill';
-export * from './UnderlineTitle';
+export { default as CustomLayout } from './CustomLayout';
+export { default as Footer } from './Footer';
+export { default as NavBar } from './NavBar';
+export { default as SiderBar } from './SiderBar';
+export * from './index';
