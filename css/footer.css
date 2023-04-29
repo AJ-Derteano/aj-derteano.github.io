@@ -1,7 +1,7 @@
 footer.footer {
   width: 100%;
   margin-top: 4rem;
-  font-family: "Roboto", sans-serif !important;
+  font-family: 'Roboto', sans-serif !important;
   color: #fff;
 }
 footer.footer a {
@@ -37,7 +37,7 @@ footer.footer .div__derechos-autor {
 .div__menu-logo {
   font-size: 1.5rem;
   text-align: center;
-  font-family: "Dancing Script", cursive !important;
+  font-family: 'Dancing Script', cursive !important;
   letter-spacing: 0.3rem;
 }
 
@@ -123,7 +123,7 @@ footer.footer .div__derechos-autor {
   letter-spacing: 0.2rem;
 }
 
-.span__btn-close-form{
+.span__btn-close-form {
   width: 40px;
   height: 40px;
   position: absolute;
@@ -131,14 +131,14 @@ footer.footer .div__derechos-autor {
   right: -2.5rem;
   background-color: #fff;
   clip-path: circle(50% at 50% 50%);
-  transition: transform .5s ease;
+  transition: transform 0.5s ease;
 }
-.span__btn-close-form:hover{
+.span__btn-close-form:hover {
   cursor: pointer;
-  transform: scale(.95);
+  transform: scale(0.95);
 }
 .span__btn-close-form::before,
-.span__btn-close-form::after{
+.span__btn-close-form::after {
   content: '';
   width: 15px;
   height: 2px;
@@ -151,7 +151,7 @@ footer.footer .div__derechos-autor {
   margin: auto;
   transform: rotate(45deg);
 }
-.span__btn-close-form::after{
+.span__btn-close-form::after {
   transform: rotate(-45deg);
 }
 
@@ -169,10 +169,24 @@ footer.footer .div__derechos-autor {
   padding: 0.5rem 1rem;
 }
 
+.div__redes {
+}
+
+.div__redes img {
+  max-width: 50px;
+}
+
+.redes_logos {
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, 80px);
+  gap: 1rem;
+}
+
 @media screen and (max-width: 767px) {
   footer.footer .div__seccion-footer {
     width: 100%;
-    flex-direction: column`;
+    flex-direction: column;
     align-items: center;
   }
 
