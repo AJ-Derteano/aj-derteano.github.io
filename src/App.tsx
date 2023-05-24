@@ -5,6 +5,7 @@ import {
   CustomFooter,
   CustomLayout,
   CustomNavbar,
+  CustomSider,
 } from '@/common';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
             path='/'
             element={
               <CustomLayout
+                sider={<CustomSider />}
                 header={<CustomNavbar />}
                 content={<CustomContent />}
                 footer={<CustomFooter />}

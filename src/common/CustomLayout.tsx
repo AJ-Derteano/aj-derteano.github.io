@@ -1,15 +1,17 @@
 import React from 'react';
 import { Layout } from 'antd';
 
-const { Header, Content, Footer } = Layout;
+const { Content, Footer, Sider } = Layout;
 
 export type CustomLayoutProps = {
+  sider?: React.ReactNode;
   header?: React.ReactNode;
   content?: React.ReactNode;
   footer?: React.ReactNode;
 };
 
 const CustomLayout: React.FC<CustomLayoutProps> = ({
+  sider,
   header,
   content,
   footer,
@@ -17,13 +19,24 @@ const CustomLayout: React.FC<CustomLayoutProps> = ({
   return (
     <div>
       <Layout>
-        <Header
-          style={{ position: 'sticky', top: 0, zIndex: 1, width: '100%' }}
+        <Sider
+          style={{
+            overflow: 'auto',
+            height: '100vh',
+            position: 'fixed',
+            left: 0,
+            top: 0,
+            bottom: 0,
+            backgroundColor: '#fff',
+          }}
+          width='30vw'
         >
-          {header}
-        </Header>
-        <Content style={{ minHeight: '100vh' }}>{content}</Content>
-        <Footer>{footer}</Footer>
+          {sider}
+        </Sider>
+        <Layout>
+          <Content style={{ minHeight: '100vh' }}>{content}</Content>
+          <Footer>{footer}</Footer>
+        </Layout>
       </Layout>
     </div>
   );
