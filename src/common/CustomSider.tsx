@@ -1,7 +1,9 @@
-import { CustomMenu } from '@/components';
-import { Divider, Image, Space, Typography } from 'antd';
 import React from 'react';
+import { Image, Space, Typography } from 'antd';
 import styled from 'styled-components';
+
+import { CustomMenu } from '@/components';
+import avatarImg from '@/assets/Avatar.jpeg';
 
 const CustomSider: React.FC = () => {
   return (
@@ -10,7 +12,7 @@ const CustomSider: React.FC = () => {
         <Space style={displayCenter}>
           <Image
             width={200}
-            src='https://placebeard.it/200x200'
+            src={avatarImg}
             className='image__avatar'
             preview={false}
           />
@@ -19,7 +21,6 @@ const CustomSider: React.FC = () => {
           AJ Derteano
           <Typography.Paragraph>Software developer</Typography.Paragraph>
         </Typography.Title>
-
         <CustomMenu />
       </Space>
     </CustomSiderStyle>
@@ -45,3 +46,4 @@ export const CustomSiderStyle = styled.div`
 `;
 
 export default CustomSider;
+
