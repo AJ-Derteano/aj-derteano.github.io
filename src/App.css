@@ -1,0 +1,10 @@
+.display_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.w100 {
+  width: 100%;
+}
+
