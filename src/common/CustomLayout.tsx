@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Layout, theme } from 'antd';
 
 const { Content, Footer, Sider } = Layout;
@@ -18,9 +18,11 @@ const CustomLayout: React.FC<CustomLayoutProps> = ({
   content,
   footer,
 }) => {
+  const [breakpoint, setBreakpoint] = useState(false);
   const {
     token: { colorBgContainer },
   } = theme.useToken();
+
   return (
     <div>
       <Layout>
@@ -38,9 +40,10 @@ const CustomLayout: React.FC<CustomLayoutProps> = ({
         >
           {sider}
         </Sider>
+
         <Layout
           style={{
-            width: 'calc(70vw)',
+            width: '70vw',
             minHeight: '100vh',
             position: 'absolute',
             right: 0,
@@ -64,6 +67,7 @@ const CustomLayout: React.FC<CustomLayoutProps> = ({
               {content}
             </div>
           </Content>
+
           <Footer
             style={{
               margin: '24px 16px 0',

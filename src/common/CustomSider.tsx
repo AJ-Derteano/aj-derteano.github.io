@@ -1,5 +1,6 @@
 import React from 'react';
-import { Image, Space, Typography } from 'antd';
+import { Card, Image, Space, Typography } from 'antd';
+import { GithubOutlined, LinkedinOutlined } from '@ant-design/icons';
 import styled from 'styled-components';
 
 import { CustomMenu } from '@/components';
@@ -17,11 +18,37 @@ const CustomSider: React.FC = () => {
             preview={false}
           />
         </Space>
+
         <Typography.Title level={2} className='title__avatar'>
           AJ Derteano
           <Typography.Paragraph>Software developer</Typography.Paragraph>
         </Typography.Title>
+
         <CustomMenu />
+
+        <Card
+          unselectable='on'
+          actions={[
+            <a target='_blank' href='https://linkedin.com/in/aj-derteano'>
+              <LinkedinOutlined style={{ fontSize: '24px' }} />
+            </a>,
+            <a target='_blank' href='https://github.com/AJ-Derteano'>
+              <GithubOutlined style={{ fontSize: '24px' }} />
+            </a>,
+          ]}
+          style={{
+            position: 'absolute',
+            bottom: '0.2rem',
+            right: 0,
+            left: 0,
+            border: 0,
+          }}
+        >
+          <Card.Meta
+            title='Contactame'
+            description='Puedes encontrar me en todas mis redes'
+          />
+        </Card>
       </Space>
     </CustomSiderStyle>
   );
@@ -35,10 +62,6 @@ const displayCenter: React.CSSProperties = {
 export const CustomSiderStyle = styled.div`
   padding-top: 3rem;
 
-  .image__avatar {
-    border-radius: 50%;
-  }
-
   .title__avatar {
     margin: 0;
     text-align: center;
@@ -46,4 +69,3 @@ export const CustomSiderStyle = styled.div`
 `;
 
 export default CustomSider;
-

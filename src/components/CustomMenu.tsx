@@ -30,16 +30,20 @@ const CustomMenu: React.FC = () => {
   }
 
   const items: MenuProps['items'] = [
-    getItem('Sobre mi', '1', <UserOutlined style={{ fontSize: 16 }} />),
-    getItem('Conocimientos', '1', <ReadOutlined style={{ fontSize: 16 }} />),
+    getItem('Sobre mi', 'about', <UserOutlined style={{ fontSize: 16 }} />),
+    getItem(
+      'Conocimientos',
+      'knowledge',
+      <ReadOutlined style={{ fontSize: 16 }} />
+    ),
     getItem(
       'Habilidades',
-      '1',
+      'skills',
       <ThunderboltOutlined style={{ fontSize: 16 }} />
     ),
     getItem(
       'Mis proyectos',
-      '1',
+      'projects',
       <AppstoreOutlined style={{ fontSize: 16 }} />
     ),
   ];
@@ -54,4 +58,3 @@ const CustomMenu: React.FC = () => {
 export const CustomMenuStyle = styled.div``;
 
 export default CustomMenu;
-

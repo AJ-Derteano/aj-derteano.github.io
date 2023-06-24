@@ -8,3 +8,6 @@
   width: 100%;
 }
 
+.image__avatar {
+  border-radius: 50%;
+}
