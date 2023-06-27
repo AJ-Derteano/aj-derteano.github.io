@@ -15,6 +15,7 @@ import {
   CustomNavbar,
   CustomSider,
 } from '@/common';
+import { AboutMe } from './components';
 
 const { darkAlgorithm, defaultAlgorithm } = theme;
 
@@ -45,18 +46,25 @@ function App() {
                     footer={<CustomFooter />}
                   />
                 ) : (
-                  <CustomMobileLayout darkMode={isDarkMode} />
+                  <CustomMobileLayout
+                    darkMode={isDarkMode}
+                    setDarkMode={setIsDarkMode}
+                  />
                 )
               }
-            />
+            >
+              <Route index element={<AboutMe />} />
+            </Route>
           </Routes>
         </BrowserRouter>
-        <FloatButton
-          type='primary'
-          style={{ right: 24, bottom: 24 }}
-          onClick={() => setIsDarkMode(!isDarkMode)}
-          icon={<FormatPainterOutlined />}
-        />
+        {!isMobile() && (
+          <FloatButton
+            type='primary'
+            style={{ right: 24, bottom: 24 }}
+            onClick={() => setIsDarkMode(!isDarkMode)}
+            icon={<FormatPainterOutlined />}
+          />
+        )}
       </ConfigProvider>
     </>
   );
