@@ -1,8 +1,7 @@
 import React from 'react';
-import isMobile from 'ismobilehook';
 import { Outlet } from 'react-router-dom';
 
-const CustomContent: React.FC = () => {
+const CommonContent: React.FC = () => {
   return (
     <div>
       <Outlet />
@@ -10,4 +9,4 @@ const CustomContent: React.FC = () => {
   );
 };
 
-export default CustomContent;
+export default CommonContent;

@@ -4,7 +4,7 @@ export interface IRoute {
   key: string;
 }
 
-export const RoutesHome = {
+export const HomeRoutePaths = {
   HOME: {
     path: '/',
     name: 'Inicio',

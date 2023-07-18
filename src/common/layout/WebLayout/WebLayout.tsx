@@ -3,7 +3,7 @@ import { Layout, theme } from 'antd';
 
 const { Content, Footer, Sider } = Layout;
 
-export type CustomLayoutProps = {
+export type WebLayoutProps = {
   darkMode?: boolean;
   sider?: React.ReactNode;
   header?: React.ReactNode;
@@ -11,7 +11,7 @@ export type CustomLayoutProps = {
   footer?: React.ReactNode;
 };
 
-const CustomLayout: React.FC<CustomLayoutProps> = ({
+const WebLayout: React.FC<WebLayoutProps> = ({
   darkMode,
   sider,
   header,
@@ -92,4 +92,4 @@ const CustomLayout: React.FC<CustomLayoutProps> = ({
   );
 };
 
-export default CustomLayout;
+export default WebLayout;

@@ -3,12 +3,12 @@ import { Card, Image, Space, Typography } from 'antd';
 import { GithubOutlined, LinkedinOutlined } from '@ant-design/icons';
 import styled from 'styled-components';
 
-import { CustomMenu } from '@/components';
+import { WebMenu } from '@/components';
 import avatarImg from '@/assets/Avatar.jpeg';
 
-const CustomSider: React.FC = () => {
+const CommonSider: React.FC = () => {
   return (
-    <CustomSiderStyle>
+    <CommonSiderStyle>
       <Space direction='vertical' style={displayCenter}>
         <Space style={displayCenter}>
           <Image
@@ -24,7 +24,7 @@ const CustomSider: React.FC = () => {
           <Typography.Paragraph>Software developer</Typography.Paragraph>
         </Typography.Title>
 
-        <CustomMenu />
+        <WebMenu />
 
         <Card
           unselectable='on'
@@ -50,7 +50,7 @@ const CustomSider: React.FC = () => {
           />
         </Card>
       </Space>
-    </CustomSiderStyle>
+    </CommonSiderStyle>
   );
 };
 
@@ -59,7 +59,7 @@ const displayCenter: React.CSSProperties = {
   justifyContent: 'center',
 };
 
-export const CustomSiderStyle = styled.div`
+export const CommonSiderStyle = styled.div`
   padding-top: 3rem;
 
   .title__avatar {
@@ -68,4 +68,4 @@ export const CustomSiderStyle = styled.div`
   }
 `;
 
-export default CustomSider;
+export default CommonSider;

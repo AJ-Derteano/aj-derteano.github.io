@@ -8,12 +8,12 @@ import esES from 'antd/locale/es_ES';
 import './App.css';
 
 import {
-  CustomContent,
-  CustomFooter,
-  CustomLayout,
-  CustomMobileLayout,
-  CustomNavbar,
-  CustomSider,
+  CommonContent,
+  CommonFooter,
+  CommonNavbar,
+  CommonSider,
+  MobileLayout,
+  WebLayout,
 } from '@/common';
 import { AboutMe } from './components';
 
@@ -38,15 +38,15 @@ function App() {
               path='/'
               element={
                 !isMobile() ? (
-                  <CustomLayout
+                  <WebLayout
                     darkMode={isDarkMode}
-                    sider={<CustomSider />}
-                    header={<CustomNavbar />}
-                    content={<CustomContent />}
-                    footer={<CustomFooter />}
+                    sider={<CommonSider />}
+                    header={<CommonNavbar />}
+                    content={<CommonContent />}
+                    footer={<CommonFooter />}
                   />
                 ) : (
-                  <CustomMobileLayout
+                  <MobileLayout
                     darkMode={isDarkMode}
                     setDarkMode={setIsDarkMode}
                   />

@@ -1,3 +1,4 @@
+import { HomeRoutePaths } from '@/constants/routes.constant';
 import {
   AppstoreOutlined,
   FormatPainterOutlined,
@@ -7,25 +8,36 @@ import {
 import { TabBar } from 'antd-mobile';
 import { UserContactOutline, UserOutline } from 'antd-mobile-icons';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
-export type CustomMobileMenuProps = {
+export type MobileMenuProps = {
   darkMode?: boolean;
   setDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-const CustomMobileMenu: React.FC<CustomMobileMenuProps> = ({
+const MobileMenu: React.FC<MobileMenuProps> = ({
   darkMode = false,
   setDarkMode,
 }) => {
+  // ? Global state or store
+  // ? Hooks
+  const navigate = useNavigate();
+
+  // ? Functions
+  // ? Vars
+  // ? Effects
+  // ? Handlers
+  // ? Other
+  // ? Return
   return (
-    <CustomMobileMenuStyle>
+    <MobileMenuStyle>
       <TabBar>
         <TabBar.Item
           title='Sobre mi'
           key='about'
           icon={
-            <span onClick={() => alert('fun')}>
+            <span onClick={() => navigate(HomeRoutePaths.HOME.path)}>
               <UserOutline />
             </span>
           }
@@ -76,14 +88,14 @@ const CustomMobileMenu: React.FC<CustomMobileMenuProps> = ({
           }
         />
       </TabBar>
-    </CustomMobileMenuStyle>
+    </MobileMenuStyle>
   );
 };
 
-export const CustomMobileMenuStyle = styled.div`
+export const MobileMenuStyle = styled.div`
   width: 100%;
   position: absolute;
   bottom: 0;
 `;
 
-export default CustomMobileMenu;
+export default MobileMenu;

@@ -3,14 +3,14 @@ import styled from 'styled-components';
 
 import { Content } from 'antd/es/layout/layout';
 import { Outlet } from 'react-router-dom';
-import { CustomMobileMenu } from '@/components';
+import { MobileMenu } from '@/components';
 
-export type CustomMobileLayoutProps = {
+export type MobileLayoutProps = {
   darkMode?: boolean;
   setDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-const CustomMobileLayout: React.FC<CustomMobileLayoutProps> = ({
+const MobileLayout: React.FC<MobileLayoutProps> = ({
   darkMode = false,
   setDarkMode,
 }) => {
@@ -22,15 +22,15 @@ const CustomMobileLayout: React.FC<CustomMobileLayoutProps> = ({
   }, [darkMode]);
 
   return (
-    <CustomMobileLayoutStyle $darkMode={darkMode}>
+    <MobileLayoutStyle $darkMode={darkMode}>
       <Content>
         <Outlet />
       </Content>
-      <CustomMobileMenu darkMode={darkMode} setDarkMode={setDarkMode} />
-    </CustomMobileLayoutStyle>
+      <MobileMenu darkMode={darkMode} setDarkMode={setDarkMode} />
+    </MobileLayoutStyle>
   );
 };
 
-export const CustomMobileLayoutStyle = styled.div<{ $darkMode: boolean }>``;
+export const MobileLayoutStyle = styled.div<{ $darkMode: boolean }>``;
 
-export default CustomMobileLayout;
+export default MobileLayout;

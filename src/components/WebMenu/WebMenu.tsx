@@ -10,7 +10,7 @@ import styled from 'styled-components';
 
 type MenuItem = Required<MenuProps>['items'][number];
 
-const CustomMenu: React.FC = () => {
+const WebMenu: React.FC = () => {
   function getItem(
     label: string,
     key: React.Key,
@@ -49,12 +49,12 @@ const CustomMenu: React.FC = () => {
   ];
 
   return (
-    <CustomMenuStyle>
+    <WebMenuStyle>
       <Menu items={items} />
-    </CustomMenuStyle>
+    </WebMenuStyle>
   );
 }; //<ReadOutlined /> <ThunderboltOutlined /> <AppstoreOutlined />
 
-export const CustomMenuStyle = styled.div``;
+export const WebMenuStyle = styled.div``;
 
-export default CustomMenu;
+export default WebMenu;
