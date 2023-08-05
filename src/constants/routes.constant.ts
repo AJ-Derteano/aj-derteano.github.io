@@ -11,3 +11,19 @@ export const HomeRoutePaths = {
     key: 'HOME',
   },
 };
+
+export const AboutRoutePaths = {
+  HOME: {
+    path: '/sobre-mi',
+    name: 'Sobre mi',
+    key: 'ABOUT',
+  }
+}
+
+export const KnowledgeRoutePaths = {
+  HOME: {
+    path: '/conocimientos',
+    name: 'Conocimientos',
+    key: 'KNOWLEDGE',
+  }
+}

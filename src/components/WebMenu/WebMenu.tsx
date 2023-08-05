@@ -7,10 +7,14 @@ import {
   UserOutlined,
 } from '@ant-design/icons';
 import styled from 'styled-components';
+import { AboutRoutePaths, KnowledgeRoutePaths } from '@/constants';
+import { useNavigate } from 'react-router-dom';
 
 type MenuItem = Required<MenuProps>['items'][number];
 
 const WebMenu: React.FC = () => {
+  const navigate = useNavigate();
+
   function getItem(
     label: string,
     key: React.Key,
@@ -30,10 +34,14 @@ const WebMenu: React.FC = () => {
   }
 
   const items: MenuProps['items'] = [
-    getItem('Sobre mi', 'about', <UserOutlined style={{ fontSize: 16 }} />),
     getItem(
-      'Conocimientos',
-      'knowledge',
+      AboutRoutePaths.HOME.name,
+      AboutRoutePaths.HOME.key,
+      <UserOutlined style={{ fontSize: 16 }} />
+    ),
+    getItem(
+      KnowledgeRoutePaths.HOME.name,
+      KnowledgeRoutePaths.HOME.key,
       <ReadOutlined style={{ fontSize: 16 }} />
     ),
     getItem(
@@ -48,12 +56,24 @@ const WebMenu: React.FC = () => {
     ),
   ];
 
+  const onClick: MenuProps['onClick'] = (e) => {
+    // Go to home
+    if (e.key === AboutRoutePaths.HOME.key) {
+      navigate(AboutRoutePaths.HOME.path);
+    }
+
+    // Go to knowledge
+    if (e.key === KnowledgeRoutePaths.HOME.key) {
+      navigate(KnowledgeRoutePaths.HOME.path);
+    }
+  };
+
   return (
     <WebMenuStyle>
-      <Menu items={items} />
+      <Menu onClick={onClick} items={items} />
     </WebMenuStyle>
   );
-}; //<ReadOutlined /> <ThunderboltOutlined /> <AppstoreOutlined />
+};
 
 export const WebMenuStyle = styled.div``;
 

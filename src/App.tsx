@@ -16,6 +16,8 @@ import {
   WebLayout,
 } from '@/common';
 import { AboutMe } from './components';
+import { Knowledge } from './components/Knowledge';
+import { AboutRoutePaths, KnowledgeRoutePaths } from './constants';
 
 const { darkAlgorithm, defaultAlgorithm } = theme;
 
@@ -54,6 +56,11 @@ function App() {
               }
             >
               <Route index element={<AboutMe />} />
+              <Route path={AboutRoutePaths.HOME.path} element={<AboutMe />} />
+              <Route
+                path={KnowledgeRoutePaths.HOME.path}
+                element={<Knowledge />}
+              />
             </Route>
           </Routes>
         </BrowserRouter>

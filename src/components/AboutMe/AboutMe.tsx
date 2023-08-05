@@ -8,14 +8,25 @@ const AboutMe: React.FC = () => {
   return (
     <AboutMeStyle>
       {isMobile() && <Image src={avatarImg} />}
+      {isMobile() && <h1>Hola!. Soy Andrés Derteano</h1>}
 
-      <h1>Hola!. Soy Andrés Derteano</h1>
-
-      <p>
-        Soy un desarrollador de software apasionado por aprender y enseñar. Me
-        encanta trabajar con React y React Native, pero siempre busco probar
-        cosas nuevas.
-      </p>
+      <section>
+        <p>
+          <h1>Hola!. Soy Andrés Derteano</h1>
+          "¡Hola! Soy un apasionado desarrollador de software de 25 años, con un
+          enfoque especializado en entornos Node.js. Mi experiencia abarca el
+          espectro completo, desde la creación de aplicaciones web con React y
+          TypeScript hasta el desarrollo de backend sólido con Nest.js. Además,
+          he incursionado en el mundo de las aplicaciones móviles utilizando
+          React Native. A lo largo de mi trayectoria, he contribuido
+          significativamente en diversos proyectos y colaborado con varias
+          empresas para ofrecer soluciones tecnológicas innovadoras y
+          eficientes. Mi dedicación a la excelencia técnica y la resolución
+          creativa de problemas me impulsa a seguir creciendo en el emocionante
+          campo del desarrollo de software."
+        </p>
+        <Image src='./public/Code typing-rafiki.png' />
+      </section>
     </AboutMeStyle>
   );
 };
@@ -33,8 +44,18 @@ export const AboutMeStyle = styled.div`
     margin: 0 auto;
   }
 
-  p {
-    text-align: justify;
+  section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    p {
+      text-align: justify;
+      font-size: 1.2rem;
+    }
+
+    img {
+      transform: scaleX(-1);
+    }
   }
 `;
 
