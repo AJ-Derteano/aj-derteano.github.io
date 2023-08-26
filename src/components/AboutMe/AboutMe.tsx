@@ -3,28 +3,34 @@ import React from 'react';
 import styled from 'styled-components';
 import isMobile from 'ismobilehook';
 import avatarImg from '@/assets/Avatar.jpeg';
+import { Typography } from 'antd';
 
 const AboutMe: React.FC = () => {
   return (
     <AboutMeStyle>
       {isMobile() && <Image src={avatarImg} />}
-      {isMobile() && <h1>Hola!. Soy Andrés Derteano</h1>}
+      {isMobile() && (
+        <Typography.Title level={2}>Andrés Derteano</Typography.Title>
+      )}
 
       <section>
-        <p>
-          <h1>Hola!. Soy Andrés Derteano</h1>
-          "¡Hola! Soy un apasionado desarrollador de software de 25 años, con un
-          enfoque especializado en entornos Node.js. Mi experiencia abarca el
-          espectro completo, desde la creación de aplicaciones web con React y
-          TypeScript hasta el desarrollo de backend sólido con Nest.js. Además,
-          he incursionado en el mundo de las aplicaciones móviles utilizando
-          React Native. A lo largo de mi trayectoria, he contribuido
-          significativamente en diversos proyectos y colaborado con varias
-          empresas para ofrecer soluciones tecnológicas innovadoras y
-          eficientes. Mi dedicación a la excelencia técnica y la resolución
-          creativa de problemas me impulsa a seguir creciendo en el emocionante
-          campo del desarrollo de software."
-        </p>
+        <article>
+          <Typography.Title level={2}>Andrés Derteano</Typography.Title>
+
+          <p>
+            "¡Hola! Soy un apasionado desarrollador de software de 25 años, con
+            un enfoque especializado en entornos Node.js. Mi experiencia abarca
+            el espectro completo, desde la creación de aplicaciones web con
+            React y TypeScript hasta el desarrollo de backend sólido con
+            Nest.js. Además, he incursionado en el mundo de las aplicaciones
+            móviles utilizando React Native. A lo largo de mi trayectoria, he
+            contribuido significativamente en diversos proyectos y colaborado
+            con varias empresas para ofrecer soluciones tecnológicas innovadoras
+            y eficientes. Mi dedicación a la excelencia técnica y la resolución
+            creativa de problemas me impulsa a seguir creciendo en el
+            emocionante campo del desarrollo de software."
+          </p>
+        </article>
         <Image src='./public/Code typing-rafiki.png' />
       </section>
     </AboutMeStyle>
@@ -32,6 +38,7 @@ const AboutMe: React.FC = () => {
 };
 
 export const AboutMeStyle = styled.div`
+  min-height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;

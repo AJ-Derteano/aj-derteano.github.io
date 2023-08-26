@@ -18,11 +18,17 @@ import {
 import { AboutMe } from './components';
 import { Knowledge } from './components/Knowledge';
 import { AboutRoutePaths, KnowledgeRoutePaths } from './constants';
+import { LoadSite } from './components/LoadSite';
 
 const { darkAlgorithm, defaultAlgorithm } = theme;
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
+
+  setTimeout(() => {
+    setIsLoading(false);
+  }, 3000);
   return (
     <>
       <ConfigProvider
@@ -35,6 +41,7 @@ function App() {
         }}
       >
         <BrowserRouter>
+          {isLoading && <LoadSite />}
           <Routes>
             <Route
               path='/'
@@ -64,6 +71,7 @@ function App() {
             </Route>
           </Routes>
         </BrowserRouter>
+
         {!isMobile() && (
           <FloatButton
             type='primary'

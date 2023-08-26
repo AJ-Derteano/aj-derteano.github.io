@@ -11,3 +11,7 @@
 .image__avatar {
   border-radius: 50%;
 }
+
+path {
+  fill: currentcolor !important;
+}

@@ -1,0 +1,134 @@
+knowledge:
+  - name: React
+    level: Avanzado
+    description: React es una biblioteca Javascript de código abierto diseñada para crear interfaces de usuario con el objetivo de facilitar el desarrollo de aplicaciones en una sola página.
+    icon: ./public/icons/react.svg
+    category: frontend
+    color: '#61DAFB'
+
+  - name: React Native
+    level: Intermedio
+    description: React Native es una biblioteca Javascript diseñada para crear interfaces de usuario con el objetivo de facilitar el desarrollo de aplicaciones móviles nativas.
+    icon: ./public/icons/react.svg
+    category: frontend
+
+  - name: Angular
+    level: Basico
+    description: Angular es un framework para aplicaciones web desarrollado en TypeScript, de código abierto, mantenido por Google, que se utiliza para crear y mantener aplicaciones web de una sola página.
+    icon: ./public/icons/angular.svg
+    color: '#fefefe'
+    category: frontend
+
+  - name: Vue
+    level: Basico
+    description: Vue.js es un framework de JavaScript de código abierto para construir interfaces de usuario y aplicaciones de una sola página.
+    icon: ./public/icons/vue.svg
+    category: frontend
+
+  - name: Node.js
+    level: Intermedio
+    description: Node.js es un entorno de ejecución para JavaScript construido con el motor de JavaScript V8 de Chrome.
+    icon: ./public/icons/node.svg
+    category: backend
+
+  - name: Express
+    level: Intermedio
+    description: Express.js, o simplemente Express, es un marco de aplicación web para Node.js, lanzado como software gratuito y de código abierto bajo la Licencia MIT.
+    icon: ./public/icons/express.svg
+    category: backend
+
+  - name: NestJs
+    level: Intermedio
+    description: Nest es un marco de aplicaciones web de código abierto para Node.js, que se basa en Express, TypeScript y el patrón de arquitectura de software del controlador.
+    icon: ./public/icons/nestjs.svg
+    category: backend
+
+  - name: MongoDB
+    level: Intermedio
+    description: MongoDB es un sistema de base de datos NoSQL, orientado a documentos y de código abierto.
+    icon: ./public/icons/mongodb.svg
+    category: database
+
+  - name: MySQL
+    level: Intermedio
+    description: MySQL es un sistema de gestión de bases de datos relacional, multihilo y multiusuario con más de seis millones de instalaciones.
+    icon: ./public/icons/mysql.svg
+    category: database
+
+  - name: PostgreSQL
+    level: Intermedio
+    description: PostgreSQL es un sistema de gestión de bases de datos relacional orientado a objetos y de código abierto.
+    icon: ./public/icons/postgresql.svg
+    category: database
+
+  - name: Git
+    level: Intermedio
+    description: Git es un software de control de versiones diseñado por Linus Torvalds, pensando en la eficiencia, la confiabilidad y compatibilidad del mantenimiento de versiones de aplicaciones cuando estas tienen un gran número de archivos de código fuente.
+    icon: ./public/icons/git.svg
+    category: tools
+
+  - name: Github
+    level: Intermedio
+    description: GitHub es una plataforma de desarrollo colaborativo de software para alojar proyectos utilizando el sistema de control de versiones Git.
+    icon: ./public/icons/github.svg
+    category: tools
+
+  - name: Docker
+    level: Intermedio
+    description: Docker es un proyecto de código abierto que automatiza el despliegue de aplicaciones dentro de contenedores de software.
+    icon: ./public/icons/docker.svg
+    category: tools
+
+  - name: Javascript
+    level: Avanzado
+    description: JavaScript es un lenguaje de programación interpretado, dialecto del estándar ECMAScript.
+    icon: ./public/icons/javascript.svg
+    category: language
+
+  - name: Php
+    level: Intermedio
+    description: PHP es un lenguaje de programación de uso general de código del lado del servidor originalmente diseñado para el desarrollo web de contenido dinámico.
+    icon: ./public/icons/php.svg
+    category: language
+
+  - name: Typescript
+    level: Intermedio
+    description: TypeScript es un lenguaje de programación de código abierto desarrollado y mantenido por Microsoft.
+    icon: ./public/icons/typescript.svg
+    category: language
+
+  - name: HTML
+    level: Avanzado
+    description: HTML, sigla en inglés de HyperText Markup Language, hace referencia al lenguaje de marcado para la elaboración de páginas web.
+    icon: ./public/icons/html.svg
+    category: frontend
+
+  - name: CSS
+    level: Avanzado
+    description: CSS es un lenguaje de diseño gráfico para definir y crear la presentación de un documento estructurado escrito en un lenguaje de marcado.
+    icon: ./public/icons/css.svg
+    category: frontend
+
+  - name: SASS
+    level: Intermedio
+    description: Sass es un lenguaje de hojas de estilo inicialmente diseñado por Hampton Catlin y desarrollado por Natalie Weizenbaum.
+    icon: ./public/icons/sass.svg
+    category: frontend
+
+  - name: Bootstrap
+    level: Intermedio
+    description: Bootstrap es una biblioteca multiplataforma o conjunto de herramientas de código abierto para diseño de sitios y aplicaciones web.
+    icon: ./public/icons/bootstrap.svg
+    category: frontend
+
+  - name: Ant Design
+    level: Intermedio
+    description: Ant Design es una biblioteca de componentes de interfaz de usuario para React.js.
+    icon: ./public/icons/ant-design.svg
+    category: frontend
+
+  - name: 'Genexus 18'
+    level: Basico
+    description: GeneXus es una herramienta de desarrollo de software multiplataforma, basada en conocimientos y orientada a modelos.
+    icon: ./public/icons/genexus.svg
+    category: other
