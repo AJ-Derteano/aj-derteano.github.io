@@ -44,19 +44,17 @@ const Knowledge: React.FC = () => {
     <KnowledgeStl>
       <Typography.Title level={2}>Conocimientos</Typography.Title>
       <section>
-        <Typography.Text>
+        <p>
           A lo largo de mi desarrollo profesional he ido adquiriendo diferentes
           conocimientos, los cuales me han ayudado a desarrollarme profesional y
           y personal mente, entre los conocimientos adquiridos destaco las
           habilidades blandas para poder comunicar me efectivamente con
           compañero de equipos, jefes y subordinados.
-        </Typography.Text>
+        </p>
 
-        <Typography.Text>
-          Te comparto mis conocimientos técnicos
-        </Typography.Text>
+        <p>Te comparto mis conocimientos técnicos</p>
       </section>
-      <br /> <br /> <br />
+      <br />
       <Space>
         <Tag
           color='#fefefe'
@@ -161,6 +159,10 @@ const tagStl: React.CSSProperties = {
 };
 
 export const KnowledgeStl = styled.div`
+  p {
+    font-size: 1.2rem;
+  }
+
   .container-icon {
     display: flex;
     flex-direction: column;

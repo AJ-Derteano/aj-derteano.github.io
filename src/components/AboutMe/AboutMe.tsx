@@ -56,7 +56,6 @@ export const AboutMeStyle = styled.div`
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
     p {
-      text-align: justify;
       font-size: 1.2rem;
     }
 
