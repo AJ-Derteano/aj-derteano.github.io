@@ -7,7 +7,11 @@ import {
   UserOutlined,
 } from '@ant-design/icons';
 import styled from 'styled-components';
-import { AboutRoutePaths, KnowledgeRoutePaths } from '@/constants';
+import {
+  AboutRoutePaths,
+  KnowledgeRoutePaths,
+  ProjectsRoutePaths,
+} from '@/constants';
 import { useNavigate } from 'react-router-dom';
 
 type MenuItem = Required<MenuProps>['items'][number];
@@ -65,6 +69,11 @@ const WebMenu: React.FC = () => {
     // Go to knowledge
     if (e.key === KnowledgeRoutePaths.HOME.key) {
       navigate(KnowledgeRoutePaths.HOME.path);
+    }
+
+    // Go to projects
+    if (e.key === 'projects') {
+      navigate(ProjectsRoutePaths.HOME.path);
     }
   };
 

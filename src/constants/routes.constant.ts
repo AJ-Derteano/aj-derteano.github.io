@@ -27,3 +27,11 @@ export const KnowledgeRoutePaths = {
     key: 'KNOWLEDGE',
   }
 }
+
+export const ProjectsRoutePaths = {
+  HOME: {
+    path: '/proyectos',
+    name: 'Proyectos',
+    key: 'PROJECTS',
+  }
+}

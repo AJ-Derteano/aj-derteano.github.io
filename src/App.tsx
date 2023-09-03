@@ -17,8 +17,13 @@ import {
 } from '@/common';
 import { AboutMe } from './components';
 import { Knowledge } from './components/Knowledge';
-import { AboutRoutePaths, KnowledgeRoutePaths } from './constants';
+import {
+  AboutRoutePaths,
+  KnowledgeRoutePaths,
+  ProjectsRoutePaths,
+} from './constants';
 import { LoadSite } from './components/LoadSite';
+import { Projects } from './components/Projects';
 
 const { darkAlgorithm, defaultAlgorithm } = theme;
 
@@ -67,6 +72,10 @@ function App() {
               <Route
                 path={KnowledgeRoutePaths.HOME.path}
                 element={<Knowledge />}
+              />
+              <Route
+                path={ProjectsRoutePaths.HOME.path}
+                element={<Projects />}
               />
             </Route>
           </Routes>
